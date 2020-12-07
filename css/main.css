@@ -349,6 +349,7 @@ template {
 
 body {
   color: #16db93;
+  text-align: center;
 }
 
 img {
@@ -366,6 +367,20 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.lg-screen {
+  display: none;
+}
+@media (min-width: 725px) {
+  .lg-screen {
+    display: block;
+  }
+}
+
+.bg-primary {
+  padding: 10vh 0;
+  background: #048ca8;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -406,8 +421,43 @@ h2 {
 
 .grid {
   display: flex;
+  flex-wrap: wrap;
 }
 
+.col {
+  flex: 0 0 100%;
+  padding: 0 0.75em;
+}
+@media (min-width: 725px) {
+  .col:first-of-type {
+    padding-left: 0;
+  }
+  .col:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.col--full {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 725px) {
+  .col--1-3 {
+    flex-basis: 33.33333%;
+  }
+
+  .col--2-3 {
+    flex-basis: 66.66666%;
+  }
+
+  .col--1-2 {
+    flex-basis: 50%;
+  }
+
+  .col--1-6 {
+    flex-basis: 16.66666%;
+  }
+}
 .main-header {
   position: absolute;
   top: 0;
@@ -429,9 +479,21 @@ h2 {
   padding-bottom: 8em;
   text-align: center;
 }
+@media (min-width: 725px) {
+  .hero {
+    text-align: left;
+    padding-bottom: 0;
+  }
+}
 
-.hero-img {
-  display: none;
+@media (min-width: 725px) {
+  .hero-text {
+    margin-top: 5vmax;
+  }
+}
+
+.skills {
+  text-align: center;
 }
 
 .main-nav {
@@ -445,6 +507,16 @@ h2 {
   overflow: hidden;
   transition: all ease-in-out 250ms;
 }
+@media (min-width: 725px) {
+  .main-nav {
+    position: relative;
+    flex: auto;
+    background: none;
+    margin-top: 1em;
+    margin-left: 2em;
+    left: 0;
+  }
+}
 .main-nav ul {
   display: flex;
   flex-direction: column;
@@ -452,10 +524,23 @@ h2 {
   text-align: center;
   height: 100vh;
 }
+@media (min-width: 725px) {
+  .main-nav ul {
+    flex-direction: row;
+    height: auto;
+  }
+}
 .main-nav li {
   flex: 1 1 auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   display: flex;
+}
+@media (min-width: 725px) {
+  .main-nav li {
+    display: inline-block;
+    border: none;
+    text-align: right;
+  }
 }
 .main-nav a {
   color: white;
@@ -465,8 +550,21 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 725px) {
+  .main-nav a {
+    justify-content: flex-end;
+    flex-basis: auto;
+    display: inline;
+  }
+}
 .main-nav a:hover {
   background: rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 725px) {
+  .main-nav a:hover {
+    background: none;
+    color: #8e1047;
+  }
 }
 .main-nav.is-open {
   left: 0;
@@ -479,6 +577,11 @@ h2 {
   right: 1em;
   top: 1em;
   cursor: pointer;
+}
+@media (min-width: 725px) {
+  .nav-toggle {
+    display: none;
+  }
 }
 
 .hamburger, .hamburger::before, .hamburger::after {
@@ -506,6 +609,49 @@ h2 {
 }
 .hamburger.is-open::before {
   opacity: 0;
+}
+
+.main-projects {
+  padding: 10vh 0 0;
+  background: #444;
+}
+.main-projects .main-project {
+  margin-bottom: 2.5em;
+}
+.main-projects .main-project:first-of-type {
+  margin-top: 1.5em;
+}
+.main-projects .main-project:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 725px) {
+  .main-projects .main-project:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.skill {
+  width: 100%;
+  max-width: 15rem;
+  margin: 0 auto;
+  align-self: center;
+}
+
+footer {
+  background: #444;
+  color: white;
+  padding: 0.1em 0;
+}
+
+.social-links {
+  display: flex;
+  font-size: 2rem;
+  opacity: 0.8;
+  margin: 0.1em 0;
+  justify-content: flex-end;
+}
+.social-links a {
+  padding-right: 0.5em;
 }
 
 .btn {
