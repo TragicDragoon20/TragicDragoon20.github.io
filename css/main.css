@@ -392,7 +392,7 @@ h2 {
 @supports (display: grid) {
   .intro {
     display: grid;
-    grid-template-columns: minmax(4em, 1fr) minmax(auto, 30em) minmax(4em, 1fr);
+    grid-template-columns: minmax(4em, 1fr) minmax(auto, 40rem) minmax(4em, 1fr);
   }
 }
 
@@ -458,4 +458,134 @@ h2 {
 
 .welcome h1::after {
   margin: 2em auto 0;
+}
+
+.about-me {
+  width: 90;
+  margin: 0 auto;
+  max-width: 50em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.about-me::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about-img {
+  max-height: 25em;
+}
+
+@media (min-width: 42em) {
+  .about-img {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+.about-title {
+  margin-bottom: .5em;
+}
+
+.about-subtitle {
+  margin: 0.5em 0;
+}
+
+@supports (display: grid) {
+  .about-me {
+    display: grid;
+    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+  }
+  .about-img {
+    grid-column: port / img;
+    grid-row: 1 / 2;
+  }
+  .about-title {
+    grid-column: name / port;
+    grid-row: 1 / 2;
+    align-self: end;
+  }
+  .about-subtitle,
+  .about-text {
+    grid-column: port / port;
+  }
+}
+
+.portfolio {
+  text-align: center;
+  background: #E8E9EB;
+  padding: 5em 0;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 10rem;
+  margin: 0;
+}
+
+.portfolio-item img {
+  display: block;
+}
+
+.portfolio-item figcaption {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 2em;
+  background: rgba(3, 175, 194, 0.75);
+  color: #FFFFFF;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: top ease-in-out 250ms;
+}
+
+.portfolio-item:hover figcaption,
+.portfolio-item:focus figcaption {
+  top: 0;
+}
+
+.portfolio-title {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  margin-bottom: auto;
+}
+
+.featured .portfolio-title {
+  font-size: 4rem;
+}
+
+.portfolio-desc {
+  display: none;
+}
+
+.featured .portfolio-desc {
+  display: block;
+}
+
+.portfolio-link {
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-bottom: 3px solid #FFFFFF;
+  align-self: flex-start;
+}
+
+.portfolio-link::after {
+  content: url(../img/arrow-white.svg);
+  display: inline-block;
+  height: .8em;
+  width: .8em;
+  margin-left: .5em;
 }
