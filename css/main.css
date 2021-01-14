@@ -346,6 +346,12 @@ body {
   font-size: 0.875rem;
 }
 
+@media (min-width: 50em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
 img {
   max-width: 100%;
 }
@@ -361,6 +367,12 @@ h1 {
   font-size: 3.125rem;
 }
 
+@media (min-width: 50em) {
+  h1 {
+    font-size: 4.25rem;
+  }
+}
+
 h2 {
   font-size: 2rem;
   letter-spacing: 0.15em;
@@ -369,6 +381,12 @@ h2 {
   line-height: 1;
   font-family: "Six Caps", sans-serif;
   font-weight: 400;
+}
+
+@media (min-width: 50em) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 .intro {
@@ -431,6 +449,12 @@ h2 {
   text-align: center;
 }
 
+@media (min-width: 50em) {
+  .welcome h1 {
+    font-size: 3vw;
+  }
+}
+
 .welcome h1 span {
   display: block;
   font-size: 5.5rem;
@@ -441,6 +465,12 @@ h2 {
   font-family: "Six Caps", sans-serif;
   font-weight: 400;
   padding-left: 00.15em;
+}
+
+@media (min-width: 50em) {
+  .welcome h1 span {
+    font-size: 10vw;
+  }
 }
 
 .welcome h1::before, .welcome h1::after {
@@ -497,10 +527,16 @@ h2 {
   .about-me {
     display: grid;
     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    column-gap: .5em;
   }
   .about-img {
     grid-column: port / img;
     grid-row: 1 / 2;
+  }
+  @media (min-width: 50em) {
+    .about-img {
+      grid-row: 1 / 4;
+    }
   }
   .about-title {
     grid-column: name / port;
@@ -510,6 +546,18 @@ h2 {
   .about-subtitle,
   .about-text {
     grid-column: port / port;
+  }
+  @media (min-width: 50em) {
+    .about-subtitle,
+    .about-text {
+      grid-column: image-end / port-end;
+    }
+  }
+  .about-subtitle {
+    grid-row: 2 / 3;
+  }
+  .about-text {
+    grid-row: 3 / 4;
   }
 }
 
@@ -522,17 +570,21 @@ h2 {
 .portfolio-items {
   display: flex;
   flex-wrap: wrap;
+  width: 90;
+  margin: 0 auto;
+  max-width: 75em;
 }
 
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  flex: 1 1 10rem;
+  flex: 1 1 20rem;
   margin: 0;
 }
 
 .portfolio-item img {
   display: block;
+  width: 100%;
 }
 
 .portfolio-item figcaption {
@@ -561,16 +613,8 @@ h2 {
   margin-bottom: auto;
 }
 
-.featured .portfolio-title {
-  font-size: 4rem;
-}
-
 .portfolio-desc {
   display: none;
-}
-
-.featured .portfolio-desc {
-  display: block;
 }
 
 .portfolio-link {
@@ -588,4 +632,131 @@ h2 {
   height: .8em;
   width: .8em;
   margin-left: .5em;
+}
+
+@supports (display: grid) {
+  .portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 50em) {
+    .portfolio-items {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .portfolio-item.featured {
+    grid-column: 1/ span 2;
+    grid-row: 1 / span 2;
+  }
+  .featured .portfolio-title {
+    font-size: 5rem;
+  }
+  .featured .portfolio-desc {
+    display: block;
+  }
+}
+
+.contact {
+  width: 90;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 5em 0;
+}
+
+.contact h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+@supports (display: grid) {
+  @media (min-width: 50em) {
+    form {
+      display: grid;
+      column-gap: 1em;
+      grid-template-areas: "name       email" "message    message" ".          button";
+    }
+    form .name {
+      grid-area: name;
+    }
+    form .email {
+      grid-area: email;
+    }
+    form .message {
+      grid-area: message;
+    }
+    form .message textarea {
+      height: 10em;
+    }
+    form .button {
+      grid-area: button;
+    }
+  }
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+  color: #606060;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  display: block;
+  padding: .75em;
+  width: 100%;
+  background: #f8f9f9;
+  border: 1px solid #A7A7A7;
+  font-size: 1.2rem;
+}
+
+.button {
+  display: inline-block;
+  width: auto;
+  margin-top: 1em;
+  margin-left: auto;
+  background: #03AFC2;
+  border: none;
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  padding: .5em 1.5em;
+}
+
+footer {
+  background: #223843;
+  padding: 5em 0;
+  text-align: center;
+}
+
+footer::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #FFFFFF;
+  margin-bottom: 4em;
+  width: 25%;
+  margin: 4em auto;
+}
+
+.social-icons {
+  width: 90;
+  margin: 0 auto;
+  max-width: 15em;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.75em auto;
+}
+
+.social-icon {
+  width: 25%;
+  height: 25%;
 }

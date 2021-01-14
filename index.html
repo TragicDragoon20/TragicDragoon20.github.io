@@ -8,6 +8,15 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
 
+    <nav>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#portfolio">portfolio</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+
     <body>
       <div class="welcome">
         <h1>Welcome to my <span>Portfolio</span></h1>
@@ -89,26 +98,28 @@
       <section class="contact">
         <h1>Contact me</h1>
         <form action="">
-          <label class="name">Name:
+          <label for="name" class="name">Name:
             <input type="text" id="name">
           </label>
 
-          <label for="email">Email:
+          <label for="email" class="email">Email:
             <input type="email" id="email">
           </label>
 
-          <label message="message">Message:
+          <label message="message" class="message">Message:
             <textarea name="" id="message"></textarea>
           </label>
+
+          <input class="button form-button" type="submit" value="SEND">
         </form>
       </section>
 
       <footer>
         <p>Follow me on social media</p>
         <div class="social-icons">
-          <img class="social-icon" src="" alt="twitter">
-          <img class="social-icon" src="" alt="linkdin">
-          <img class="social-icon" src="" alt="github">
+          <a class="social-icon" href="https://twitter.com/TragicDragoon_"><img  src="img/twitter.svg" alt="twitter"> </a>
+          <a class="social-icon" href="https://www.linkedin.com/in/callum-metcalfe-6863591a8/"><img  src="img/linkdin.svg" alt="linkdin"> </a>
+          <a class="social-icon" href="https://github.com/TragicDragoon20"><img  src="img/github.svg" alt="github"> </a>
         </div>
       </footer>
     </body>
