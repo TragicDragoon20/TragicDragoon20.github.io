@@ -344,6 +344,7 @@ body {
   line-height: 1.6;
   background: #FFFFFF;
   font-size: 0.875rem;
+  overflow-x: hidden;
 }
 
 @media (min-width: 50em) {
@@ -439,6 +440,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .welcome h1 {
@@ -656,6 +658,121 @@ h2 {
   }
 }
 
+.portfolio-modal {
+  position: fixed;
+  z-index: 10;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+}
+
+.portfolio-modal.is-open {
+  display: block;
+}
+
+.modal-close {
+  width: 2em;
+  height: 2em;
+  background: transparent;
+  border: 0;
+  position: fixed;
+  left: 1em;
+  top: 1em;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-header {
+  text-align: left;
+  padding: 4em 0;
+  margin-bottom: 2em;
+}
+
+.portfolio-header:nth-of-type(1) {
+  background-image: url(../../img/Chloe-made-me-do-this.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-title-box {
+  background: rgba(3, 175, 194, 0.75);
+  padding: 3em 0 3em 3em;
+  color: #FFFFFF;
+  width: 70%;
+}
+
+.portfolio-title-box .portfolio-title {
+  font-size: 3.5rem;
+  display: inline-block;
+}
+
+.portfolio-title-box .portfolio-title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: .5em 0;
+  background: #FFFFFF;
+  width: 100%;
+}
+
+.portfolio-subtitle {
+  font-size: 1rem;
+}
+
+.portfolio-content {
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.portfolio-full-width {
+  width: 100vw;
+  max-width: initial;
+  margin: 0 calc(50% - 50vw);
+  height: 20vh;
+  object-fit: cover;
+}
+
+@media (min-width: 50em) {
+  .portfolio-pull-left {
+    width: 65%;
+    float: left;
+    margin-right: 2em;
+  }
+  .portfolio-pull-right {
+    width: 65%;
+    float: right;
+    margin-left: 2em;
+  }
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .contact {
   width: 90;
   margin: 0 auto;
@@ -759,4 +876,93 @@ footer::after {
 .social-icon {
   width: 25%;
   height: 25%;
+}
+
+.menu-button {
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  background: transparent;
+  border: 0;
+  width: 3em;
+  height: auto;
+}
+
+.nav-close {
+  display: none;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 20%;
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: transform ease-out 250ms;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background: #03AFC2;
+}
+
+nav li {
+  text-align: center;
+}
+
+nav li:not(:last-of-type) {
+  border-bottom: 1px solid #223843;
+}
+
+nav li:hover {
+  background: #0398a9;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 4rem;
+  letter-spacing: 0.15em;
+  color: #223843;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  padding: calc(100vh/8) 0;
+  line-height: 0;
+  width: 100%;
+}
+
+.nav-is-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.nav-is-open nav {
+  transform: translateX(0);
+}
+
+.nav-is-open .container-all {
+  transform: translateX(80%);
+}
+
+.nav-is-open .nav-close {
+  display: block;
+}
+
+.nav-is-open .menu-hamburger {
+  display: none;
+}
+
+.nav-is-open .menu-button {
+  transform: translateX(-70%);
 }

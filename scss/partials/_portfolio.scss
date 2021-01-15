@@ -93,3 +93,113 @@
         }
     }
 }
+
+
+.portfolio-modal{
+    position: fixed;
+    z-index: 10;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    background: $white;
+    box-shadow: 0 0 0 5em rgba(black, .5);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    display: none;
+
+    &.is-open{
+        display: block;
+    }
+}
+
+.modal-close{
+    width: 2em;
+    height: 2em;
+    background: transparent;
+    border: 0;
+    position: fixed;
+    left: 1em;
+    top: 1em;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(black, .5);
+}
+
+.portfolio-header{
+    text-align: left;
+    padding: 4em 0;
+    margin-bottom: 2em;
+}
+
+.portfolio-header:nth-of-type(1){
+    background-image: url(../../img/Chloe-made-me-do-this.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-title-box{
+    background: rgba($accent, .75);
+    padding: 3em 0 3em 3em;
+    color: $white;
+    width: 70%;
+    
+    .portfolio-title{
+        font-size: 3.5rem;
+        display: inline-block;
+
+        &::after{
+            content: "";
+            display: block;
+            height: 1px;
+            margin: .5em 0;
+            background: $white;
+            width: 100%;
+        }
+    }
+}
+
+.portfolio-subtitle{
+    font-size: 1rem;
+}
+
+.portfolio-content{
+    text-align: left;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+.portfolio-full-width{
+    width: 100vw;
+    max-width: initial;
+    margin: 0 calc(50% - 50vw);
+    height: 20vh;
+    object-fit: cover;
+}
+
+@include mq{
+    .portfolio-pull-left{
+        width: 65%;
+        float: left;
+        margin-right: 2em;
+    }
+
+    .portfolio-pull-right{
+        width: 65%;
+        float: right;
+        margin-left: 2em;
+    }
+}
+
+@keyframes modalIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes modalOut{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
