@@ -424,6 +424,11 @@ h2 {
   justify-content: center;
 }
 
+.intro-middle img {
+  justify-content: space-evenly;
+  width: 25%;
+}
+
 .intro-left img,
 .intro-right img {
   object-fit: cover;
@@ -953,6 +958,7 @@ nav a {
 
 .nav-is-open .container-all {
   transform: translateX(80%);
+  overflow-y: hidden;
 }
 
 .nav-is-open .nav-close {

@@ -71,6 +71,7 @@ nav a{
     }
     .container-all{
         transform: translateX(80%);
+        overflow-y: hidden;
     }
     .nav-close{
         display: block;
