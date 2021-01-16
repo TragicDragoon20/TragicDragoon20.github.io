@@ -17,13 +17,13 @@
 
     @supports(display: grid){
         display: grid;
-        grid-template-columns: minmax(4em, 1fr) minmax(auto, 40rem) minmax(4em, 1fr);
+        grid-template-columns: 1fr minmax(auto, 30em) 1fr;
     }
 }
 
 .intro-middle{
     background: $dark-blue;
-    padding: 2.5em 5vh;
+    padding: 2.5em 5vw;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -41,4 +41,12 @@
 .skill{
     justify-content: space-evenly;
     width: 25%;
+}
+
+.intro-left img{ 
+    object-position: left;
+}
+
+.intro-right img{
+    object-position: right;
 }

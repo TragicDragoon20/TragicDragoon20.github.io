@@ -411,13 +411,13 @@ h2 {
 @supports (display: grid) {
   .intro {
     display: grid;
-    grid-template-columns: minmax(4em, 1fr) minmax(auto, 40rem) minmax(4em, 1fr);
+    grid-template-columns: 1fr minmax(auto, 30em) 1fr;
   }
 }
 
 .intro-middle {
   background: #223843;
-  padding: 2.5em 5vh;
+  padding: 2.5em 5vw;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -435,6 +435,14 @@ h2 {
 .skill {
   justify-content: space-evenly;
   width: 25%;
+}
+
+.intro-left img {
+  object-position: left;
+}
+
+.intro-right img {
+  object-position: right;
 }
 
 .welcome {
@@ -513,10 +521,9 @@ h2 {
 
 .about-img {
   width: 40em;
-  height: auto;
 }
 
-@media (min-width: 42em) {
+@media (min-width: 40em) {
   .about-img {
     float: left;
     margin-right: 1em;
@@ -534,8 +541,13 @@ h2 {
 @supports (display: grid) {
   .about-me {
     display: grid;
-    grid-template-columns: [port-start] minmax(24em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    grid-template-columns: [port-start] minmax(7em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 1fr [port-end];
     column-gap: .5em;
+  }
+  @media (min-width: 50em) {
+    .about-me {
+      grid-template-columns: [port-start] minmax(24em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    }
   }
   .about-img {
     grid-column: port / img;
