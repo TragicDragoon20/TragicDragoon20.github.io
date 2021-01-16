@@ -130,13 +130,13 @@
 
 .portfolio-header{
     text-align: left;
-    padding: 4em 0;
+    padding: 5em 0;
     margin-bottom: 2em;
 }
 
 .portfolio-header:nth-of-type(1){
-    background-image: url(../../img/Chloe-made-me-do-this.jpg);
-    background-size: cover;
+    background-image: url(../../img/TumbleTown-full-width.png);
+    background-size:cover;
     background-position: center;
 }
 
@@ -173,11 +173,14 @@
 }
 
 .portfolio-full-width{
-    width: 100vw;
+    width: 100%;
     max-width: initial;
-    margin: 0 calc(50% - 50vw);
     height: 20vh;
-    object-fit: cover;
+    object-fit: fill;
+
+    @include mq{
+        height: auto;
+    }
 }
 
 @include mq{

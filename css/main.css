@@ -424,17 +424,17 @@ h2 {
   justify-content: center;
 }
 
-.intro-middle img {
-  justify-content: space-evenly;
-  width: 25%;
-}
-
 .intro-left img,
 .intro-right img {
   object-fit: cover;
   min-height: 100%;
   min-width: 100%;
   display: block;
+}
+
+.skill {
+  justify-content: space-evenly;
+  width: 25%;
 }
 
 .welcome {
@@ -500,7 +500,7 @@ h2 {
 .about-me {
   width: 90;
   margin: 0 auto;
-  max-width: 50em;
+  max-width: 75em;
   margin-top: 5em;
   margin-bottom: 5em;
 }
@@ -512,7 +512,8 @@ h2 {
 }
 
 .about-img {
-  max-height: 25em;
+  width: 40em;
+  height: auto;
 }
 
 @media (min-width: 42em) {
@@ -533,7 +534,7 @@ h2 {
 @supports (display: grid) {
   .about-me {
     display: grid;
-    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    grid-template-columns: [port-start] minmax(24em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
     column-gap: .5em;
   }
   .about-img {
@@ -697,12 +698,12 @@ h2 {
 
 .portfolio-header {
   text-align: left;
-  padding: 4em 0;
+  padding: 5em 0;
   margin-bottom: 2em;
 }
 
 .portfolio-header:nth-of-type(1) {
-  background-image: url(../../img/Chloe-made-me-do-this.jpg);
+  background-image: url(../../img/TumbleTown-full-width.png);
   background-size: cover;
   background-position: center;
 }
@@ -740,11 +741,16 @@ h2 {
 }
 
 .portfolio-full-width {
-  width: 100vw;
+  width: 100%;
   max-width: initial;
-  margin: 0 calc(50% - 50vw);
   height: 20vh;
-  object-fit: cover;
+  object-fit: fill;
+}
+
+@media (min-width: 50em) {
+  .portfolio-full-width {
+    height: auto;
+  }
 }
 
 @media (min-width: 50em) {
