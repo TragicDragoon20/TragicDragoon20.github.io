@@ -25,7 +25,6 @@
     background: $dark-blue;
     padding: 2.5em 5vw;
     text-align: center;
-    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -38,9 +37,23 @@
     display: block;
 }
 
-.skill{
-    justify-content: space-evenly;
-    width: 25%;
+.skills{
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+    .skill{
+        width: 25%;
+    }
+
+    @supports(display: grid){
+        display: grid;
+        grid-template-columns: repeat(3, 6em);
+
+        .skill{
+            width: 100%;
+        }
+    }
 }
 
 .intro-left img{ 

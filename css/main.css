@@ -419,7 +419,6 @@ h2 {
   background: #223843;
   padding: 2.5em 5vw;
   text-align: center;
-  display: flex;
   flex-direction: column;
   justify-content: center;
 }
@@ -432,9 +431,25 @@ h2 {
   display: block;
 }
 
-.skill {
-  justify-content: space-evenly;
+.skills {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills .skill {
   width: 25%;
+}
+
+@supports (display: grid) {
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 6em);
+  }
+  .skills .skill {
+    width: 100%;
+  }
 }
 
 .intro-left img {
