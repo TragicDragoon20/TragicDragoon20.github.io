@@ -63,7 +63,7 @@ nav li{
             border: none;
         }
     }
-    @include mq{1
+    @include mq{
         margin-right: 1em;
     }
 }

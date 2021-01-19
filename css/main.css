@@ -760,6 +760,12 @@ h2 {
   font-size: 1rem;
 }
 
+.portfolio-subtitle a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 .portfolio-content {
   text-align: left;
   width: 85%;
