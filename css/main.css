@@ -917,7 +917,7 @@ footer::after {
 }
 
 .menu-button {
-  position: absolute;
+  position: fixed;
   top: 3em;
   left: 3em;
   background: transparent;
@@ -931,7 +931,7 @@ footer::after {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;

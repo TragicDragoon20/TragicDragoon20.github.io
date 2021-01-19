@@ -1,5 +1,5 @@
 .menu-button{
-    position: absolute;
+    position: fixed;
     top: 3em;
     left: 3em;
     background: transparent;
@@ -9,17 +9,13 @@
     height: auto;
 }
 
-.menu-hamburger{
-    
-}
 
 .nav-close{
     display: none;
-    
 }
 
 nav{
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
