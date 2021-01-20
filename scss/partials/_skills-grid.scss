@@ -1,4 +1,4 @@
-.skills{
+.skills-grid{
     display: flex;
     color: rgba($white, 0.7);
 
@@ -37,7 +37,7 @@
     display: block;
 }
 
-.skills-grid{
+.skills-icons{
     display: flex;
     gap: 0.5em;
     flex-wrap: wrap;

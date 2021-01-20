@@ -390,16 +390,16 @@ h2 {
   }
 }
 
-.skills {
+.skills-grid {
   display: flex;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.skills h2 {
+.skills-grid h2 {
   color: #FFFFFF;
 }
 
-.skills h2::after {
+.skills-grid h2::after {
   content: "";
   width: 20%;
   height: 1px;
@@ -409,7 +409,7 @@ h2 {
 }
 
 @supports (display: grid) {
-  .skills {
+  .skills-grid {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 30em) 1fr;
   }
@@ -431,23 +431,23 @@ h2 {
   display: block;
 }
 
-.skills-grid {
+.skills-icons {
   display: flex;
   gap: 0.5em;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.skills-grid .skill {
+.skills-icons .skill {
   width: 25%;
 }
 
 @supports (display: grid) {
-  .skills-grid {
+  .skills-icons {
     display: grid;
     grid-template-columns: repeat(3, 6em);
   }
-  .skills-grid .skill {
+  .skills-icons .skill {
     width: 100%;
   }
 }
@@ -1005,4 +1005,25 @@ nav a {
   text-align: center;
   background: #E8E9EB;
   padding: 5em 0;
+}
+
+@supports (display: grid) {
+  .skill-write-up {
+    width: 90;
+    margin: 0 auto;
+    max-width: 50em;
+    margin-top: 0.5em;
+    display: grid;
+    grid-template-columns: [skills-start] 0.2fr [img-end] 1fr [skills-end];
+    column-gap: .5em;
+    row-gap: .5em;
+    background: #223843;
+  }
+  .skill-write-up .skill-write-up-icon {
+    grid-column: skills / img;
+  }
+  .skill-write-up .skill-text {
+    grid-column: img-end / skills-end;
+    text-align: start;
+  }
 }

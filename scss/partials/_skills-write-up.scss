@@ -1,5 +1,28 @@
 .skills-write-up{
+    
     text-align: center;
     background: $light-gray;
     padding: 5em 0;
+}
+
+@supports(display: grid){
+    .skill-write-up{
+        @include container;
+        margin-top: 0.5em;
+        display: grid;
+        grid-template-columns: [skills-start]0.2fr [img-end]1fr [skills-end];
+        column-gap: .5em;
+        row-gap: .5em;
+        background: $dark-blue;
+
+        .skill-write-up-icon{
+            grid-column: skills / img;
+        }
+
+        .skill-text{
+
+            grid-column: img-end / skills-end;
+            text-align: start;
+        }
+    }
 }
