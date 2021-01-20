@@ -390,16 +390,16 @@ h2 {
   }
 }
 
-.intro {
+.skills {
   display: flex;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.intro h2 {
+.skills h2 {
   color: #FFFFFF;
 }
 
-.intro h2::after {
+.skills h2::after {
   content: "";
   width: 20%;
   height: 1px;
@@ -409,13 +409,13 @@ h2 {
 }
 
 @supports (display: grid) {
-  .intro {
+  .skills {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 30em) 1fr;
   }
 }
 
-.intro-middle {
+.skills-middle {
   background: #223843;
   padding: 2.5em 5vw;
   text-align: center;
@@ -423,108 +423,48 @@ h2 {
   justify-content: center;
 }
 
-.intro-left img,
-.intro-right img {
+.skills-left img,
+.skills-right img {
   object-fit: cover;
   min-height: 100%;
   min-width: 100%;
   display: block;
 }
 
-.skills {
+.skills-grid {
   display: flex;
   gap: 0.5em;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.skills .skill {
+.skills-grid .skill {
   width: 25%;
 }
 
 @supports (display: grid) {
-  .skills {
+  .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 6em);
   }
-  .skills .skill {
+  .skills-grid .skill {
     width: 100%;
   }
 }
 
-.intro-left img {
+.skills-left img {
   object-position: left;
 }
 
-.intro-right img {
+.skills-right img {
   object-position: right;
-}
-
-.welcome {
-  background: #E8E9EB;
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.welcome h1 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #223843;
-  line-height: 1.5;
-  text-align: center;
-}
-
-@media (min-width: 50em) {
-  .welcome h1 {
-    font-size: 3vw;
-  }
-}
-
-.welcome h1 span {
-  display: block;
-  font-size: 5.5rem;
-  letter-spacing: 0.15em;
-  color: #03AFC2;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: "Six Caps", sans-serif;
-  font-weight: 400;
-  padding-left: 00.15em;
-}
-
-@media (min-width: 50em) {
-  .welcome h1 span {
-    font-size: 10vw;
-  }
-}
-
-.welcome h1::before, .welcome h1::after {
-  content: "";
-  display: block;
-  margin: 0 auto 2em;
-  width: 60%;
-  height: 1px;
-  background: #223843;
-}
-
-.welcome h1::before {
-  margin: 0 auto 2em;
-}
-
-.welcome h1::after {
-  margin: 2em auto 0;
 }
 
 .about-me {
   width: 90;
   margin: 0 auto;
-  max-width: 75em;
-  margin-top: 5em;
+  max-width: 50em;
+  margin-top: 3em;
   margin-bottom: 5em;
 }
 
@@ -1059,4 +999,10 @@ nav a {
 
 .nav-is-open .menu-button {
   transform: translateX(-70%);
+}
+
+.skills-write-up {
+  text-align: center;
+  background: #E8E9EB;
+  padding: 5em 0;
 }

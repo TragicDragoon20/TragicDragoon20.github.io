@@ -1,8 +1,8 @@
 .about-me{
-    @include container($max-width: 75em);
+    @include container;
     @include clearfix;
 
-    margin-top: 5em;
+    margin-top: 3em;
     margin-bottom: 5em;
 }
 

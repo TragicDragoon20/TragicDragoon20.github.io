@@ -1,4 +1,4 @@
-.intro{
+.skills{
     display: flex;
     color: rgba($white, 0.7);
 
@@ -21,7 +21,7 @@
     }
 }
 
-.intro-middle{
+.skills-middle{
     background: $dark-blue;
     padding: 2.5em 5vw;
     text-align: center;
@@ -29,15 +29,15 @@
     justify-content: center;
 }
 
-.intro-left img,
-.intro-right img {
+.skills-left img,
+.skills-right img {
     object-fit: cover;
     min-height: 100%;
     min-width: 100%;
     display: block;
 }
 
-.skills{
+.skills-grid{
     display: flex;
     gap: 0.5em;
     flex-wrap: wrap;
@@ -56,10 +56,10 @@
     }
 }
 
-.intro-left img{ 
+.skills-left img{ 
     object-position: left;
 }
 
-.intro-right img{
+.skills-right img{
     object-position: right;
 }
