@@ -858,6 +858,7 @@ footer::after {
 }
 
 .social-icon {
+  margin-right: 0.2em;
   width: 25%;
   height: 25%;
 }
