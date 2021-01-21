@@ -14,13 +14,13 @@
         column-gap: .5em;
         row-gap: .5em;
         background: $dark-blue;
-
+        
         .skill-write-up-icon{
             grid-column: skills / img;
         }
 
         .skill-text{
-
+            border-left: 2px solid $dark-gray;
             grid-column: img-end / skills-end;
             text-align: start;
         }

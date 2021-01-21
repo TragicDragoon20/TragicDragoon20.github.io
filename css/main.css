@@ -1023,6 +1023,7 @@ nav a {
     grid-column: skills / img;
   }
   .skill-write-up .skill-text {
+    border-left: 2px solid #606060;
     grid-column: img-end / skills-end;
     text-align: start;
   }
