@@ -61,7 +61,7 @@
     align-self: flex-start;
 
     &::after{
-        content: url(../img/arrow-white.svg);
+        content: url(../img/logos/arrow-white.svg);
         display: inline-block;
         height: .8em;
         width: .8em;
@@ -135,7 +135,7 @@
 }
 
 .portfolio-header:nth-of-type(1){
-    background-image: url(../../img/TumbleTown-full-width.png);
+    background-image: url(../../img/games/TumbleTown-full-width.png);
     background-size:cover;
     background-position: center;
 }

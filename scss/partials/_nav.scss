@@ -8,7 +8,7 @@
     width: 3em;
     height: auto;
 
-    @include mq{
+    @include mq($width: 60em){
         display: none;
     }
 }
@@ -27,7 +27,7 @@ nav{
     z-index: 10;
     transform: translateX(-100%);
     transition: transform ease-out 250ms;
-    @include mq{
+    @include mq($width: 60em){
         transform: translateX(0);
         right: 0;
         height: 4vh;
@@ -45,7 +45,7 @@ nav ul{
     align-items: stretch;
     background: $accent;
 
-    @include mq{
+    @include mq($width: 60em){
         flex-direction: row;
         height: 4vh;
         align-items: center;
@@ -63,7 +63,7 @@ nav li{
             border: none;
         }
     }
-    @include mq{
+    @include mq($width: 60em){
         margin-right: 1em;
     }
 }
@@ -79,7 +79,7 @@ nav a{
     padding: calc(100vh/8) 0;
     line-height: 0;
     width: 100%;
-    @include mq{
+    @include mq($width: 60em){
         @include sans-serif($fs: 2rem, $colour: $dark-blue);
         padding: 0;
     }

@@ -1,5 +1,5 @@
 .about-me{
-    @include container;
+    @include container($max-width: 60em);
     @include clearfix;
 
     margin-top: 3em;
@@ -15,7 +15,7 @@
 }
 
 .about-title{
-    margin-bottom: .5em;
+    margin-bottom: 0em;
 }
 
 .about-subtitle{
@@ -26,8 +26,9 @@
     .about-me{
         display: grid;
         grid-template-columns: [port-start]minmax(7em, 1fr) [name-start]minmax(6em, 1fr) [img-end]1fr [port-end];
-        column-gap: .5em;
-        @include mq{
+        gap: .5em;
+        column-gap: 1em;
+        @include mq($width: 60em){
             grid-template-columns: [port-start]minmax(24em, 1fr) [name-start]minmax(6em, 1fr) [img-end]2fr [port-end];
         }
     }
@@ -36,31 +37,41 @@
         grid-column: port / img;
         grid-row: 1 / 2;
 
-        @include mq{
+        @include mq($width: 60em){
             grid-row: 1 / 4;
         }
     }
 
     .about-title{
-        grid-column: name / port;
-        grid-row: 1 / 2;
+        grid-row: 2/3;
+        grid-column: port / port;
         align-self: end;
+        @include mq($width: 60em){
+            grid-row: 1 / 2;
+            grid-column: image-end / port;
+        }
     }
 
     .about-subtitle,
     .about-text{
         grid-column: port / port;
 
-        @include mq{
+        @include mq($width: 60em){
             grid-column: image-end / port-end;
         }
     }
 
     .about-subtitle{
-        grid-row: 2 / 3;
+        grid-row: 3/4;
+        @include mq($width: 60em){
+            grid-row: 2 / 3;
+        }
     }
 
     .about-text{
-        grid-row: 3 / 4;
+        grid-row: 4/4;
+        @include mq($width: 60em){
+            grid-row: 3 / 4;
+        }
     }
 }

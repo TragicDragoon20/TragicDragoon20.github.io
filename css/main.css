@@ -463,7 +463,7 @@ h2 {
 .about-me {
   width: 90;
   margin: 0 auto;
-  max-width: 50em;
+  max-width: 60em;
   margin-top: 3em;
   margin-bottom: 5em;
 }
@@ -486,7 +486,7 @@ h2 {
 }
 
 .about-title {
-  margin-bottom: .5em;
+  margin-bottom: 0em;
 }
 
 .about-subtitle {
@@ -497,9 +497,10 @@ h2 {
   .about-me {
     display: grid;
     grid-template-columns: [port-start] minmax(7em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 1fr [port-end];
-    column-gap: .5em;
+    gap: .5em;
+    column-gap: 1em;
   }
-  @media (min-width: 50em) {
+  @media (min-width: 60em) {
     .about-me {
       grid-template-columns: [port-start] minmax(24em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
     }
@@ -508,31 +509,47 @@ h2 {
     grid-column: port / img;
     grid-row: 1 / 2;
   }
-  @media (min-width: 50em) {
+  @media (min-width: 60em) {
     .about-img {
       grid-row: 1 / 4;
     }
   }
   .about-title {
-    grid-column: name / port;
-    grid-row: 1 / 2;
+    grid-row: 2/3;
+    grid-column: port / port;
     align-self: end;
+  }
+  @media (min-width: 60em) {
+    .about-title {
+      grid-row: 1 / 2;
+      grid-column: image-end / port;
+    }
   }
   .about-subtitle,
   .about-text {
     grid-column: port / port;
   }
-  @media (min-width: 50em) {
+  @media (min-width: 60em) {
     .about-subtitle,
     .about-text {
       grid-column: image-end / port-end;
     }
   }
   .about-subtitle {
-    grid-row: 2 / 3;
+    grid-row: 3/4;
+  }
+  @media (min-width: 60em) {
+    .about-subtitle {
+      grid-row: 2 / 3;
+    }
   }
   .about-text {
-    grid-row: 3 / 4;
+    grid-row: 4/4;
+  }
+  @media (min-width: 60em) {
+    .about-text {
+      grid-row: 3 / 4;
+    }
   }
 }
 
@@ -602,7 +619,7 @@ h2 {
 }
 
 .portfolio-link::after {
-  content: url(../img/arrow-white.svg);
+  content: url(../img/logos/arrow-white.svg);
   display: inline-block;
   height: .8em;
   width: .8em;
@@ -670,7 +687,7 @@ h2 {
 }
 
 .portfolio-header:nth-of-type(1) {
-  background-image: url(../../img/TumbleTown-full-width.png);
+  background-image: url(../../img/games/TumbleTown-full-width.png);
   background-size: cover;
   background-position: center;
 }
@@ -873,7 +890,7 @@ footer::after {
   height: auto;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 60em) {
   .menu-button {
     display: none;
   }
@@ -894,7 +911,7 @@ nav {
   transition: transform ease-out 250ms;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 60em) {
   nav {
     transform: translateX(0);
     right: 0;
@@ -914,7 +931,7 @@ nav ul {
   background: #03AFC2;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 60em) {
   nav ul {
     flex-direction: row;
     height: 4vh;
@@ -938,7 +955,7 @@ nav li:not(:last-of-type) {
   }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 60em) {
   nav li {
     margin-right: 1em;
   }
@@ -963,7 +980,7 @@ nav a {
   width: 100%;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 60em) {
   nav a {
     font-size: 2rem;
     letter-spacing: 0.15em;
