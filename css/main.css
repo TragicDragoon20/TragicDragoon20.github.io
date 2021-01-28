@@ -633,7 +633,7 @@ h2 {
   }
   @media (min-width: 50em) {
     .portfolio-items {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
   }
   .portfolio-item.featured {
