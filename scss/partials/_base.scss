@@ -2,13 +2,14 @@ body{
     color: $gray;
     font-family: $ff-s;
     line-height: 1.6;
-    background: $white;
+    background: $dark-gray;
     font-size: 0.875rem;
-
     overflow-x: hidden;
 
-    @include mq{
+    @include mq($width: 60em){
         font-size: 1.125rem;
+        display: grid;
+        grid-template-columns: [nav-start](20vw) [content-start](80vw);
     }
 }
 
@@ -36,5 +37,17 @@ h2{
 
     @include mq{
         font-size: 3rem;
+    }
+}
+
+.nav{
+    @include mq{
+        grid-column-end: span 1;
+    }
+}
+
+.container-all{
+    @include mq{
+        grid-column: content-start/ content-end;
     }
 }
