@@ -339,10 +339,10 @@ template {
 }
 
 body {
-  color: #8b8b8b;
+  color: #aca59a;
   font-family: "Merriweather", serif;
   line-height: 1.6;
-  background: #494848;
+  background: #2c2f31;
   font-size: 0.875rem;
   overflow-x: hidden;
 }
@@ -365,7 +365,7 @@ h1, h2, p {
 }
 
 h1 {
-  color: #008b9b;
+  color: #019aa5;
   line-height: 1;
   font-size: 3.125rem;
 }
@@ -379,7 +379,7 @@ h1 {
 h2 {
   font-size: 2rem;
   letter-spacing: 0.15em;
-  color: #8b8b8b;
+  color: #aca59a;
   text-transform: uppercase;
   line-height: 1;
   font-family: "Six Caps", sans-serif;
@@ -499,7 +499,7 @@ h2 {
 
 .portfolio {
   text-align: center;
-  background: #8b8b8b;
+  background: #474d50;
   padding: 5em 0;
 }
 
@@ -530,7 +530,7 @@ h2 {
   right: 0;
   left: 0;
   padding: 2em;
-  background: rgba(0, 139, 155, 0.75);
+  background: rgba(1, 154, 165, 0.75);
   color: #FFFFFF;
   text-align: left;
   display: flex;
@@ -637,7 +637,7 @@ h2 {
 }
 
 .portfolio-title-box {
-  background: rgba(0, 139, 155, 0.75);
+  background: rgba(1, 154, 165, 0.75);
   padding: 3em 0 3em 3em;
   color: #FFFFFF;
   width: 70%;
@@ -719,7 +719,7 @@ h2 {
 }
 
 footer {
-  background: #223843;
+  background: #019aa5;
   padding: 5em 0;
   text-align: center;
 }
@@ -793,7 +793,7 @@ nav ul {
   height: 100vh;
   justify-content: space-evenly;
   align-items: stretch;
-  background: #1a1a1a;
+  background: #101112;
 }
 
 @media (min-width: 60em) {
@@ -887,7 +887,7 @@ nav a {
 
 .skills-write-up {
   text-align: center;
-  background: #494848;
+  background: #2c2f31;
   padding: 5em 0;
 }
 
@@ -907,7 +907,7 @@ nav a {
     grid-column: skills / img;
   }
   .skill-write-up .skill-text {
-    border-left: 2px solid #494848;
+    border-left: 2px solid #2c2f31;
     grid-column: img-end / skills-end;
     text-align: start;
   }

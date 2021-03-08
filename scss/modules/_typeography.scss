@@ -6,7 +6,7 @@ $ff-ss: "Six Caps", sans-serif;
 $fw-n: 400;
 $fw-b: 900;
 
-@mixin sans-serif($fs, $ls: 0.15em, $colour: $gray, $tt: uppercase, $lh: 1) {
+@mixin sans-serif($fs, $ls: 0.15em, $colour: $default-text, $tt: uppercase, $lh: 1) {
     font-size: $fs;
     letter-spacing: $ls;
     color: $colour;
