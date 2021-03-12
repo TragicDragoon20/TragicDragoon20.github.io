@@ -910,8 +910,8 @@ nav li:not(:last-of-type) {
 
 @media (min-width: 60em) {
   nav li {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
   }
 }
 
