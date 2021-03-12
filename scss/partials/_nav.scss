@@ -15,6 +15,7 @@
 
 nav{
     position: fixed;
+    background: $nav-bar-black;
     top: 0;
     bottom: 0;
     left: 0;
@@ -22,10 +23,10 @@ nav{
     z-index: 10;
     transform: translateX(-100%);
     transition: transform ease-out 250ms;
-    @include mq($width: 60em){
+    @include mq($width: 70em){
+        position: sticky;
         transform: translateX(0);
         right: 0;
-        width: 20vw;
     }
 }
 
@@ -38,7 +39,7 @@ nav ul{
     height: 100vh;
     justify-content: space-evenly;
     align-items: stretch;
-    background: $nav-bar-black;
+    
 
     @include mq($width: 60em){
         justify-content: start;
@@ -47,7 +48,9 @@ nav ul{
 
 nav li{
     text-align: center;
-
+    &:is(:first-child){
+        margin-top: 3em;
+    }
     &:not(:last-of-type){
         border-bottom: 1px solid $dark-blue;
         @include mq{
@@ -72,11 +75,13 @@ nav a{
     line-height: 0;
     width: 100%;
 
-    @include mq($width: 60em){
+    @include mq($width: 70em){
         @include sans-serif($fs: 3rem, $colour: $white);
         padding: 0;
     }
 }
+
+
 
 .nav-close{
     display: none;

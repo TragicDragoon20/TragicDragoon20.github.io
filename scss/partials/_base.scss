@@ -6,10 +6,10 @@ body{
     font-size: 0.875rem;
     overflow-x: hidden;
 
-    @include mq($width: 60em){
+    @include mq($width: 70em){
         font-size: 1.125rem;
         display: grid;
-        grid-template-columns: [nav-start](20vw) [content-start](80vw);
+        grid-template-columns: [nav-start](15vw) [content-start](85vw) [content-end];
     }
 }
 
@@ -35,19 +35,21 @@ h1{
 h2{
     @include sans-serif($fs: 2rem);
 
-    @include mq{
+    @include mq($width: 60em){
         font-size: 3rem;
     }
 }
 
 .nav{
-    @include mq{
-        grid-column-end: span 1;
+    @include mq($width: 70em){
+        nav{
+            grid-column: nav-start/ content-start;
+        }
     }
 }
 
 .container-all{
-    @include mq{
+    @include mq($width: 70em){
         grid-column: content-start/ content-end;
     }
 }

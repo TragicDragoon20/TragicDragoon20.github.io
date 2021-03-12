@@ -351,13 +351,13 @@ body {
   overflow-x: hidden;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 70em) {
   body {
     font-size: 1.125rem;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: [nav-start] 20vw [content-start] 80vw;
-        grid-template-columns: [nav-start] 20vw [content-start] 80vw;
+    -ms-grid-columns: [nav-start] 15vw [content-start] 85vw [content-end];
+        grid-template-columns: [nav-start] 15vw [content-start] 85vw [content-end];
   }
 }
 
@@ -392,20 +392,19 @@ h2 {
   font-weight: 400;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 60em) {
   h2 {
     font-size: 3rem;
   }
 }
 
-@media (min-width: 50em) {
-  .nav {
-    -ms-grid-column-span: 1;
-        grid-column-end: span 1;
+@media (min-width: 70em) {
+  .nav nav {
+    grid-column: nav-start/ content-start;
   }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 70em) {
   .container-all {
     grid-column: content-start/ content-end;
   }
@@ -839,6 +838,7 @@ footer::after {
 
 nav {
   position: fixed;
+  background: #101112;
   top: 0;
   bottom: 0;
   left: 0;
@@ -852,12 +852,13 @@ nav {
   transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 70em) {
   nav {
+    position: -webkit-sticky;
+    position: sticky;
     -webkit-transform: translateX(0);
             transform: translateX(0);
     right: 0;
-    width: 20vw;
   }
 }
 
@@ -879,7 +880,6 @@ nav ul {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  background: #101112;
 }
 
 @media (min-width: 60em) {
@@ -892,6 +892,10 @@ nav ul {
 
 nav li {
   text-align: center;
+}
+
+nav li:is(:first-child) {
+  margin-top: 3em;
 }
 
 nav li:not(:last-of-type) {
@@ -930,7 +934,7 @@ nav a {
   width: 100%;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 70em) {
   nav a {
     font-size: 3rem;
     letter-spacing: 0.15em;
