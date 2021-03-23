@@ -821,8 +821,8 @@ footer::after {
 }
 
 .menu-button {
-  position: fixed;
-  top: 3em;
+  position: absolute;
+  top: 1em;
   left: 3em;
   background: transparent;
   border: 0;
@@ -843,7 +843,7 @@ nav {
   bottom: 0;
   left: 0;
   right: 20%;
-  z-index: 10;
+  z-index: 50;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform ease-out 250ms;
@@ -882,7 +882,7 @@ nav ul {
           align-items: stretch;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 70em) {
   nav ul {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -902,13 +902,13 @@ nav li:not(:last-of-type) {
   border-bottom: 1px solid #223843;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 70) {
   nav li:not(:last-of-type) {
     border: none;
   }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 70em) {
   nav li {
     padding-top: 0.7em;
     padding-bottom: 0.7em;

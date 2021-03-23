@@ -1,6 +1,6 @@
 .menu-button{
-    position: fixed;
-    top: 3em;
+    position: absolute;
+    top: 1em;
     left: 3em;
     background: transparent;
     border: 0;
@@ -20,7 +20,7 @@ nav{
     bottom: 0;
     left: 0;
     right: 20%;
-    z-index: 10;
+    z-index: 50;
     transform: translateX(-100%);
     transition: transform ease-out 250ms;
     @include mq($width: 70em){
@@ -41,7 +41,7 @@ nav ul{
     align-items: stretch;
     
 
-    @include mq($width: 60em){
+    @include mq($width: 70em){
         justify-content: start;
     }
 }
@@ -53,11 +53,11 @@ nav li{
     }
     &:not(:last-of-type){
         border-bottom: 1px solid $dark-blue;
-        @include mq{
+        @include mq($width: 70){
             border: none;
         }
     }
-    @include mq($width: 60em){
+    @include mq($width: 70em){
         padding-top: 0.7em;
         padding-bottom: 0.7em;
     }
