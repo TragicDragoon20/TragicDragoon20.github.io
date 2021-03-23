@@ -830,7 +830,7 @@ footer::after {
   height: auto;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 70em) {
   .menu-button {
     display: none;
   }
