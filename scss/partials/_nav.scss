@@ -20,7 +20,8 @@ nav{
     bottom: 0;
     left: 0;
     right: 20%;
-    z-index: 50;
+    z-index: 5;
+    height: 100vh;
     transform: translateX(-100%);
     transition: transform ease-out 250ms;
     @include mq($width: 70em){
@@ -36,8 +37,8 @@ nav ul{
     list-style: none;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: space-evenly;
+    height: 80vh;
+    justify-content: center;
     align-items: stretch;
     
 
@@ -48,9 +49,6 @@ nav ul{
 
 nav li{
     text-align: center;
-    &:is(:first-child){
-        margin-top: 3em;
-    }
     &:not(:last-of-type){
         border-bottom: 1px solid $dark-blue;
         @include mq($width: 70){
@@ -58,6 +56,9 @@ nav li{
         }
     }
     @include mq($width: 70em){
+        &:is(:first-child){
+            margin-top: 3em;
+        }
         padding-top: 0.7em;
         padding-bottom: 0.7em;
     }
@@ -106,5 +107,32 @@ nav a{
     }
     .menu-button{
         transform: translateX(-70%);
+    }
+}
+
+.social-icons{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    @include mq($width: 70em){
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 7.3vw);
+        gap: .4vw;
+    }
+}
+.social-icon{
+    max-width: 20%;
+    @include mq($width: 70em){
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-self: center;
+        max-width: 60%;
     }
 }
