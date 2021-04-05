@@ -770,6 +770,14 @@ nav a {
   }
 }
 
+.portfolio-page {
+  margin: 0 auto;
+  margin-top: 1em;
+  max-width: 80%;
+  text-align: center;
+}
+
 .portfolio-page a {
   color: #d1cfcd;
+  text-decoration: none;
 }
