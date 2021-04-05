@@ -8,6 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     @include container($max-width: 75em);
+    margin: auto auto;
 }
 
 .portfolio-item{
@@ -19,6 +20,8 @@
     img{
         display: block;
         width: 100%;
+        height: 100%;
+        margin: auto auto;
     }
 
     figcaption{
@@ -75,7 +78,8 @@
         grid-template-columns: repeat(2, 1fr);
 
         @include mq{
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
         }
     }
 

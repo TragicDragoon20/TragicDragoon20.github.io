@@ -509,6 +509,7 @@ h2 {
   width: 90;
   margin: 0 auto;
   max-width: 75em;
+  margin: auto auto;
 }
 
 .portfolio-item {
@@ -521,6 +522,8 @@ h2 {
 .portfolio-item img {
   display: block;
   width: 100%;
+  height: 100%;
+  margin: auto auto;
 }
 
 .portfolio-item figcaption {
@@ -577,7 +580,8 @@ h2 {
   }
   @media (min-width: 50em) {
     .portfolio-items {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
   }
   .portfolio-item.featured {
