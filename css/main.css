@@ -773,11 +773,15 @@ nav a {
 .portfolio-page {
   margin: 0 auto;
   margin-top: 1em;
-  max-width: 80%;
+  width: 100%;
   text-align: center;
 }
 
 .portfolio-page a {
   color: #d1cfcd;
   text-decoration: none;
+}
+
+.portfolio-page img {
+  width: 100%;
 }
