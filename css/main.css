@@ -1,4 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Six+Caps&display=swap");
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag-box {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background: #223843;
+  border-radius: 2px;
+  padding: 2px 15px;
+  border: 1px solid #223843;
+  margin: 5px;
+}
+
+.tag-box:hover {
+  cursor: pointer;
+  border: 1px solid #E8E9EB;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -784,4 +806,8 @@ nav a {
 
 .portfolio-page img {
   width: 100%;
+}
+
+.portfolio-page-header {
+  margin-bottom: 2em;
 }
