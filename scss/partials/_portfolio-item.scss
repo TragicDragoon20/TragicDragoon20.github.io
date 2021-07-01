@@ -15,6 +15,20 @@
     }
 }
 
+.portfolio-section-title{
+    @include sans-serif($fs: 2.2rem)
+}
+
+p.portfolio-section-content{
+        margin-left: 10em;
+        margin-right: 10em;
+        margin-top: 2.5em;
+}
+p.portfolio-section-content ~ p.portfolio-section-content{
+    margin-top: 0em;
+}
+
+
 .portfolio-page-header{
     margin-bottom: 2em;
 }
