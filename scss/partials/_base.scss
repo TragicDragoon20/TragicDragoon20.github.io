@@ -36,7 +36,7 @@ h2{
     @include sans-serif($fs: 2rem, $lh: 0.1);
 
     @include mq($width: 60em){
-        font-size: 3rem;
+        font-size: 2rem;
     }
 }
 p{
