@@ -1,8 +1,10 @@
 .portfolio-page{
-    margin: 0 auto;
-    margin-top: 1em;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
     a{
         color: $default-text;
         text-decoration: none;
@@ -15,20 +17,34 @@
     }
 }
 
-.portfolio-section-title{
+
+
+.portfolio-page-content-project-details{
+    background: $gray;
+}
+
+.container{
+    padding-top: 2em;
+    @include container($max-width: 50em);
+}
+
+.portfolio-section-title-box{
     @include sans-serif($fs: 2.2rem)
 }
 
-p.portfolio-section-content{
-        margin-left: 10em;
-        margin-right: 10em;
-        margin-top: 2.5em;
-}
-p.portfolio-section-content ~ p.portfolio-section-content{
-    margin-top: 0em;
-}
-
-
 .portfolio-page-header{
-    margin-bottom: 2em;
+    padding-top: 1em;
+    background: $dark-gray;
+}
+
+.download-mobile{
+    @include mq{
+        display: none;
+    }
+}
+.download-desktop{
+    display: none;
+    @include mq{
+        display: inline-block;
+    }
 }
