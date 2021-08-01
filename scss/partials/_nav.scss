@@ -70,14 +70,14 @@ nav li:hover{
 
 nav a{
     display: inline-block;
-    @include sans-serif($fs: 4rem, $colour: $white);
+    @include sans-serif($fs: 3rem, $colour: $white);
     text-decoration: none;
     padding: calc(100vh/8) 0;
     line-height: 0;
     width: 100%;
 
     @include mq($width: 70em){
-        @include sans-serif($fs: 3rem, $colour: $white);
+        @include sans-serif($fs: 2vw, $colour: $white);
         padding: 0;
     }
 }
@@ -113,11 +113,11 @@ nav a{
 .social-icons{
     position: absolute;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0;
-    margin: 0;
+    margin-top: 5vh;
     width: 100%;
     @include mq($width: 70em){
         max-width: 100%;
@@ -128,6 +128,7 @@ nav a{
 }
 .social-icon{
     max-width: 20%;
+    padding: 0;
     @include mq($width: 70em){
         display: flex;
         margin: auto;

@@ -45,7 +45,8 @@ h1 {
    * 2. Show the overflow in Edge and IE.
    */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -82,7 +83,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -229,7 +231,8 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -263,7 +266,8 @@ textarea {
    */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -339,9 +343,14 @@ template {
 }
 
 .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tag-box {
@@ -372,8 +381,10 @@ body {
 @media (min-width: 70em) {
   body {
     font-size: 1.125rem;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: [nav-start] 15vw [content-start] 85vw [content-end];
+    -ms-grid-columns: [nav-start] 15vw [content-start] 85vw [content-end];
+        grid-template-columns: [nav-start] 15vw [content-start] 85vw [content-end];
   }
 }
 
@@ -403,7 +414,7 @@ h2 {
   letter-spacing: 0m;
   color: #d1cfcd;
   text-transform: uppercase;
-  line-height: 0.1;
+  line-height: 1.8rem;
   font-family: "Play", sans-serif;
   font-weight: 400;
 }
@@ -424,8 +435,13 @@ p {
   }
 }
 
+.container-all {
+  padding: 1em 1em;
+}
+
 @media (min-width: 70em) {
   .container-all {
+    padding: 0 0;
     grid-column: content-start/ content-end;
   }
 }
@@ -465,32 +481,46 @@ p {
 
 @supports (display: grid) {
   .about-me {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: [port-start] minmax(7em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 1fr [port-end];
+    -ms-grid-columns: [port-start] minmax(7em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 1fr [port-end];
+        grid-template-columns: [port-start] minmax(7em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 1fr [port-end];
     gap: .5em;
-    column-gap: 1em;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
   }
   @media (min-width: 60em) {
     .about-me {
-      grid-template-columns: [port-start] minmax(24em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+      -ms-grid-columns: [port-start] minmax(24em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+          grid-template-columns: [port-start] minmax(24em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
     }
   }
   .about-img {
     grid-column: port / img;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1 / 2;
   }
   @media (min-width: 60em) {
     .about-img {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 3;
       grid-row: 1 / 4;
     }
   }
   .about-title {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     grid-row: 2/3;
     grid-column: port / port;
-    align-self: end;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
   }
   @media (min-width: 60em) {
     .about-title {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
       grid-row: 1 / 2;
       grid-column: image-end / port;
     }
@@ -506,18 +536,25 @@ p {
     }
   }
   .about-subtitle {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
   @media (min-width: 60em) {
     .about-subtitle {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
       grid-row: 2 / 3;
     }
   }
   .about-text {
+    -ms-grid-row: 4;
     grid-row: 4/4;
   }
   @media (min-width: 60em) {
     .about-text {
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 1;
       grid-row: 3 / 4;
     }
   }
@@ -530,8 +567,11 @@ p {
 }
 
 .portfolio-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 90;
   margin: 0 auto;
   max-width: 75em;
@@ -541,7 +581,9 @@ p {
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  flex: 1 1 20rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
   margin: 0;
 }
 
@@ -562,8 +604,14 @@ p {
   background: rgba(1, 154, 165, 0.75);
   color: #FFFFFF;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: top ease-in-out 250ms;
   transition: top ease-in-out 250ms;
 }
 
@@ -574,7 +622,8 @@ p {
 
 .portfolio-title {
   color: #FFFFFF;
-  font-size: 2.5rem;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
   margin-bottom: auto;
 }
 
@@ -588,7 +637,8 @@ p {
   font-size: 1.1rem;
   text-decoration: none;
   border-bottom: 3px solid #FFFFFF;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .portfolio-link::after {
@@ -601,21 +651,30 @@ p {
 
 @supports (display: grid) {
   .portfolio-items {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   @media (min-width: 50em) {
     .portfolio-items {
-      grid-template-rows: repeat(2, 1fr);
-      grid-template-columns: repeat(4, 1fr);
+      -ms-grid-rows: (1fr)[2];
+          grid-template-rows: repeat(2, 1fr);
+      -ms-grid-columns: (1fr)[4];
+          grid-template-columns: repeat(4, 1fr);
     }
   }
   .portfolio-item.featured {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1/ span 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
     grid-row: 1 / span 2;
   }
   .featured .portfolio-title {
-    font-size: 5rem;
+    line-height: 4vw;
+    font-size: 4vw;
   }
   .featured .portfolio-desc {
     display: block;
@@ -647,14 +706,20 @@ nav {
   right: 20%;
   z-index: 5;
   height: 100vh;
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform ease-out 250ms;
+  transition: -webkit-transform ease-out 250ms;
   transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
 }
 
 @media (min-width: 70em) {
   nav {
+    position: -webkit-sticky;
     position: sticky;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     right: 0;
   }
 }
@@ -663,16 +728,27 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 80vh;
-  justify-content: center;
-  align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 @media (min-width: 70em) {
   nav ul {
-    justify-content: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 
@@ -706,7 +782,7 @@ nav li:hover {
 
 nav a {
   display: inline-block;
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 0m;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -721,7 +797,7 @@ nav a {
 
 @media (min-width: 70em) {
   nav a {
-    font-size: 3rem;
+    font-size: 2vw;
     letter-spacing: 0m;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -742,11 +818,13 @@ nav a {
 }
 
 .nav-is-open nav {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .nav-is-open .container-all {
-  transform: translateX(80%);
+  -webkit-transform: translateX(80%);
+          transform: translateX(80%);
   overflow-y: hidden;
 }
 
@@ -759,46 +837,68 @@ nav a {
 }
 
 .nav-is-open .menu-button {
-  transform: translateX(-70%);
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
 }
 
 .social-icons {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 0;
-  margin: 0;
+  margin-top: 5vh;
   width: 100%;
 }
 
 @media (min-width: 70em) {
   .social-icons {
     max-width: 100%;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 7.3vw);
+    -ms-grid-columns: (7.3vw)[2];
+        grid-template-columns: repeat(2, 7.3vw);
     gap: .4vw;
   }
 }
 
 .social-icon {
   max-width: 20%;
+  padding: 0;
 }
 
 @media (min-width: 70em) {
   .social-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: auto;
-    justify-content: center;
-    align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     max-width: 60%;
   }
 }
 
 .portfolio-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   margin: 0 auto;
   width: 100%;
@@ -813,8 +913,10 @@ nav a {
 .portfolio-page img {
   width: 100%;
   max-height: 25em;
-  object-fit: cover;
-  object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .portfolio-page-content-project-details {

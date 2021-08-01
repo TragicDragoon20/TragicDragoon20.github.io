@@ -34,7 +34,7 @@
         background: rgba($accent, 0.75);
         color: $white;
         text-align: left;
-        display: flex;
+        display: flex;  
         flex-direction: column;
         transition: top ease-in-out 250ms;
      }
@@ -47,7 +47,8 @@
 
 .portfolio-title{
     color: $white;
-    font-size: 2.5rem;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
     margin-bottom: auto;
 }
 
@@ -91,7 +92,8 @@
     
     .featured {
         .portfolio-title{
-            font-size: 5rem;
+            line-height: 4vw;
+            font-size: 4vw;
         }
         .portfolio-desc{
             display: block;
