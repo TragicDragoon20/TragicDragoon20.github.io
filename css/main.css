@@ -622,8 +622,8 @@ p {
 
 .portfolio-title {
   color: #FFFFFF;
-  font-size: 2.5vw;
-  line-height: 2.5vw;
+  font-size: 1.8vw;
+  line-height: 1.8vw;
   margin-bottom: auto;
 }
 
@@ -673,8 +673,8 @@ p {
     grid-row: 1 / span 2;
   }
   .featured .portfolio-title {
-    line-height: 4vw;
-    font-size: 4vw;
+    line-height: 3.7vw;
+    font-size: 3.7vw;
   }
   .featured .portfolio-desc {
     display: block;
