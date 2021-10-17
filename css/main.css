@@ -1088,6 +1088,8 @@ nav a {
       display: grid;
       grid-template: subgrid;
       text-align: left;
+      -ms-grid-columns: minmax(35vw, 1fr) minmax(4em, 1fr);
+          grid-template-columns: minmax(35vw, 1fr) minmax(4em, 1fr);
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
       grid-row: 1 / 2;
@@ -1146,6 +1148,8 @@ nav a {
       display: -ms-grid;
       display: grid;
       grid-template: subgrid;
+      -ms-grid-columns: minmax(35vw, 1fr) minmax(4em, 1fr);
+          grid-template-columns: minmax(35vw, 1fr) minmax(4em, 1fr);
       text-align: left;
       -ms-grid-row: 2;
       grid-row: 2 / 2;
