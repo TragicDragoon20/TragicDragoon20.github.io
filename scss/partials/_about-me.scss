@@ -1,18 +1,12 @@
 .about-me{
     @include container($max-width: 60em);
     @include clearfix;
-
     margin-top: 3em;
-    margin-bottom: 5em;
-}
-
-.about-img{
-    width: 50em;
-    @media (min-width: 40em){
-        float: left;
-        margin-right: 1em;
+    @include mq($width: 60em){
+        height: 70vh;
     }
 }
+
 
 .about-title{
     margin-bottom: 0em;
@@ -29,49 +23,39 @@
         gap: .5em;
         column-gap: 1em;
         @include mq($width: 60em){
-            grid-template-columns: [port-start]minmax(24em, 1fr) [name-start]minmax(6em, 1fr) [img-end]2fr [port-end];
-        }
-    }
-
-    .about-img{
-        grid-column: port / img;
-        grid-row: 1 / 2;
-
-        @include mq($width: 60em){
-            grid-row: 1 / 4;
+            grid-template-columns: [port-start]minmax(24em, 1fr) [name-start]minmax(6em, 1fr) [img-end]1fr [port-end];
         }
     }
 
     .about-title{
-        grid-row: 2/3;
-        grid-column: port / port;
+        grid-row: 1/3;
+        grid-column: port-start / img-start;
         align-self: end;
         @include mq($width: 60em){
             grid-row: 1 / 2;
-            grid-column: image-end / port;
-        }
-    }
-
-    .about-subtitle,
-    .about-text{
-        grid-column: port / port;
-
-        @include mq($width: 60em){
-            grid-column: image-end / port-end;
+            grid-column: port-start / name-start;
         }
     }
 
     .about-subtitle{
-        grid-row: 3/4;
+        grid-column: port / img;
+        grid-row: 3/3;
+        align-self: start;
         @include mq($width: 60em){
+            grid-column: port-start / name-start;
             grid-row: 2 / 3;
+
+        }
+    }
+    .about-text{
+        grid-column: port / port;
+        grid-row: 4/4;
+
+        @include mq($width: 60em){
+            grid-column: name-start / port-end;
+            grid-row: 2 / 3;
+
         }
     }
 
-    .about-text{
-        grid-row: 4/4;
-        @include mq($width: 60em){
-            grid-row: 3 / 4;
-        }
-    }
 }
