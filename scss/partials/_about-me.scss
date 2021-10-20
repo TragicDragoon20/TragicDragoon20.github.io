@@ -2,6 +2,7 @@
     @include container($max-width: 60em);
     @include clearfix;
     margin-top: 3em;
+    padding-left: 2em;;
     @include mq($width: 60em){
         height: 70vh;
     }
@@ -44,7 +45,7 @@
         @include mq($width: 60em){
             grid-column: port-start / name-start;
             grid-row: 2 / 3;
-
+            margin-top: 0;
         }
     }
     .about-text{
