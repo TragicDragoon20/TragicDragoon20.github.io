@@ -798,7 +798,7 @@ nav li:not(:last-of-type) {
 }
 
 nav li:hover {
-  background: black;
+  background: #019aa5;
 }
 
 nav a {
@@ -887,15 +887,15 @@ nav a {
     max-width: 100%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (2em)[4];
-        grid-template-columns: repeat(4, 2em);
+    -ms-grid-columns: (3em)[4];
+        grid-template-columns: repeat(4, 3em);
     gap: 0em;
   }
 }
 
 .social-icon {
   max-width: 20%;
-  padding: 0;
+  padding: 0em;
 }
 
 @media (min-width: 70em) {
@@ -911,6 +911,10 @@ nav a {
         align-self: center;
     max-width: 100%;
   }
+}
+
+.social-icon:hover {
+  background: #019aa5;
 }
 
 .portfolio-page {
