@@ -9,18 +9,23 @@
         color: $default-text;
         text-decoration: none;
     }
-    img{
-        width: 100%;
-        max-height: 25em;
-        object-fit: cover;
-        object-position: top;
-    }
 }
 
 
 
-.portfolio-page-content-project-details{
+.portfolio-page-content-section1{
     background: $gray;
+    padding-bottom: 1em;
+    img{
+        height: 100%;
+    }
+}
+
+.portfolio-page-content-section2{
+    padding-bottom: 1em;
+    img{
+        height: 100%;
+    }
 }
 
 .container{
@@ -28,12 +33,16 @@
     @include container($max-width: 50em);
 }
 
-.portfolio-section-title-box{
-    @include sans-serif($fs: 2.2rem)
+.portfolio-page-title{
+    margin-top: .3em;
+    margin-bottom: 0.2em;
+}
+.portfolio-page-subtitle{
+    margin-bottom: 0.5em;
 }
 
 .portfolio-page-header{
-    padding-top: 1em;
+    padding-top: 2em;
     background: $dark-gray;
 }
 

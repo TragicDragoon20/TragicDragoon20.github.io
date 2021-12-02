@@ -35,11 +35,12 @@
       <div class="portfolio-page">
         <div class="portfolio-page-header">
           <div class="portfolio-page-title-box">
-            <h1 class="portfolio-page-title">Procedural Solar System</h1>
-            <h2>COMP250 Project</h2>
+            <h1 class="portfolio-page-title">Procedural Solar System Project</h1>
+            <h2 class="portfolio-page-subtitle">COMP250 Project</h2>
           </div>
           <div class="tags">
             <p class="tag-box">Solo</p>
+            <p class="tag-box">4 Months</p>
             <p class="tag-box">C#</p>
             <p class="tag-box">Unity</p>
             <p class="tag-box">Git</p>
@@ -47,34 +48,73 @@
         </div>
 
         <div class="portfolio-page-content">
-          <div class="portfolio-page-content-project-details">
+          <div class="portfolio-page-content-section1">
             <div class="container">
               <h2 class="portfolio-page-content-project-details-title">Project Details</h2>
-              <p class="portfolio-page-content-project-details-text"> This was my 2nd year University project in which I worked with a team of about 15 others which included 3 Programmers, 3 Designers, 6 Artist, 2 Writters, 1 Sound Designer and 1 Animator
+              <p class="portfolio-page-content-project-details-text"> 
+                This was a solo project subbmitted for my COMP250: Artificial Intelligence module in second year. The goal of this module was to 
+                design and implement a game component implementing one or more artifical intelligence techniques.<br><br>
+
+                With this in mind I wanted to create a system which would produce solar systems similar to our own that would also use
+                simulated gravity to hold the planets in orbit rather than placing them into a set loop.<br><br>
+
+                We were also tasked with creating a research poster that would outline a problem with the solution being our artefact whilst including 
+                at least one UML Diagram.</p><a href="../img/COMP250-Poster.pdf" target="_blank">View Poster</a>
+
               </p>
-              <div class="download">
-                <iframe class="download-desktop" frameborder="0" src="https://itch.io/embed/874346?border_width=2&amp;bg_color=2c2f31&amp;fg_color=d1cfcd&amp;link_color=019aa5&amp;border_color=474d50" width="554" height="169"><a href="https://low-poly-platypus.itch.io/legal-tender">Legal Tender by Low Poly Platypus, katehookham, Heathage, Benjamin Emdon, SummerBosley, BubblezFever, Christopher Robertson, Callum Metcalfe</a></iframe>
-                <iframe class="download-mobile" frameborder="0" src="https://itch.io/embed/874346?border_width=2&amp;bg_color=2c2f31&amp;fg_color=d1cfcd&amp;link_color=019aa5&amp;border_color=474d50" width="210" height="169"><a href="https://low-poly-platypus.itch.io/legal-tender">Legal Tender by Low Poly Platypus, katehookham, Heathage, Benjamin Emdon, SummerBosley, BubblezFever, Christopher Robertson, Callum Metcalfe</a></iframe>
-              </div>
             </div>
           </div>
 
-          <div class="portfolio-page-content-contribution">
+          <div class="portfolio-page-content-section2">
             <div class="container">
-              <h2 class="portfolio-page-content-contribution-title">My Contribution</h2>
-              <p class="portfolio-page-content-contribution-text">The main area I worked on for this project was the AI which uses inheritance to create multiple types of enemies. This AI was paired with some triggers to determain which
-                enemies would be enabled to start firing on the player. The project also had a diegetic UI for the main menu which I worked on along side the designer to get the camera to move towards a different area of the map when wanting to see
-                the level select.
+              <h2 class="portfolio-page-content-contribution-title">Gravity Simulation</h2>
+              <p class="portfolio-page-content-contribution-text">
+                For the simulation of the gravity I opted to use a rigidbody and Newton's law of gravitation to calculate the acceleration 
+                of the celestial bodies; as well as another formula to calculate the starting velocity of the celestial bodies so that they have 
+                enough speed to start an orbit around the star in the system. 
+                </p>
+              <img src="../img/games/SolarsystemShowcase.gif" alt="">
+            </div>
+          </div>
+
+          <div class="portfolio-page-content-section1">
+            <div class="container">
+              <h2 class="portfolio-page-content-contribution-title">Planet Generation</h2>
+              <p class="portfolio-page-content-contribution-text">
+                In order to store the data about the planets I used scriptable objects which would be used to store any infomation that needed to be 
+                calculated. The generation of the planets were then done by using constrained randomness based on the values calculated about each planet
+                and values in our sysetm. For instance the hill sphere is used to constrain how close/far the bodies moons can be.
+              </p>
+
+              <img src="../img/games/planetdata.png" alt="">
+            </div>
+          </div>
+
+          <div class="portfolio-page-content-section2">
+            <div class="container">
+              <h2 class="portfolio-page-content-contribution-title">What Went well</h2>
+              <p class="portfolio-page-content-contribution-text">
+                An area that went well in my opinion was the handling of the celestial bodies data as I used inheritance to create multiple types of scriptale 
+                objects for all the different bodies which allowed me to choose which data was needed by all the bodies and which was only needed by one type of body.<br><br>
+
+                Another area I'm happy with is the gravity simulation as it allows for any number of planets to be generated and all have gravity simulated around them and be 
+                affected by the other bodies that are in the scene which allows for the orbits to be disturbed.
               </p>
             </div>
           </div>
 
-          <div class="slideshow-container">
-            <div class="slide fade">
-              <img src="../img/games/legalTenderBanner.png" alt="">
-            </div>
-            <div class="slide fade">
-              <img src="../img/games/LegalTender.gif" alt="">
+          <div class="portfolio-page-content-section1">
+            <div class="container">
+              <h2 class="portfolio-page-content-contribution-title">What Could be improved</h2>
+              <p class="portfolio-page-content-contribution-text">
+                An area I would like to improve is the spawning of the planets so that they aren't all spawned in a row and instead are at random points around the star<br><br>
+
+                Another area I would want to improve on is some of the mesh generation as the planets are spawned with some terrain generated on to them; however, it was done 
+                close to the end so it was left to simply add some hills to the planets but I would have liked it to add crators on the moons.<br><br>
+
+                My final improvement would most likely be to change how the planets were spawned so that it wasn't constrained randomness as I feel that the solar system
+                usually looks very similar to past generations.
+              </p>
             </div>
           </div>
 
