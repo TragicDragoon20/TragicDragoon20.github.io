@@ -894,8 +894,8 @@ nav a {
     max-width: 100%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (3em)[4];
-        grid-template-columns: repeat(4, 3em);
+    -ms-grid-columns: (20%)[4];
+        grid-template-columns: repeat(4, 20%);
     gap: 0em;
   }
 }

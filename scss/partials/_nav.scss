@@ -123,7 +123,7 @@ nav a{
     @include mq($width: 70em){
         max-width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 3em);
+        grid-template-columns: repeat(4, 20%);
         gap: 0em;
     }
 }
