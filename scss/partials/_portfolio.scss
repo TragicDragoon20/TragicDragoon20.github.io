@@ -32,7 +32,7 @@
         right: 0;
         left: 0;
         padding: 2em;
-        background: rgba($accent, 0.75);
+        background: rgba($accent, 0.9);
         color: $white;
         text-align: left;
         display: flex;  
@@ -55,6 +55,7 @@
 
 .portfolio-desc{
     display: none;
+    color: $white;
 }
 
 .portfolio-link{

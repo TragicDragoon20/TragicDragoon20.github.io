@@ -627,7 +627,7 @@ p {
   right: 0;
   left: 0;
   padding: 2em;
-  background: rgba(1, 154, 165, 0.75);
+  background: rgba(1, 154, 165, 0.9);
   color: #FFFFFF;
   text-align: left;
   display: -webkit-box;
@@ -655,6 +655,7 @@ p {
 
 .portfolio-desc {
   display: none;
+  color: #FFFFFF;
 }
 
 .portfolio-link {

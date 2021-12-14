@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Callum Metcalfe - Procedural Solar System</title>
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+      <div class="nav">
+        <nav>
+          <ul>
+            <li><a href="../index.html">about</a></li>
+            <li><a href="../index.html#portfolio ">portfolio</a></li>
+            <li><a href="skills.html">skills</a></li>
+          </ul>
+          <div class="social-icons">
+            <a href="https://github.com/TragicDragoon20"><img class="social-icon" src="/img/logos/github.svg" alt="github"></a>
+            <a href="https://twitter.com/TragicDragoon_"><img class="social-icon" src="/img/logos/twitter.svg" alt="twitter"></a>
+            <a href="https://www.linkedin.com/in/callum-metcalfe-6863591a8/"><img class="social-icon" src="/img/logos/linkdin.svg" alt="linkedin"></a>
+            <a href="mailto:callumjmetcalfe@outlook.com"><img class="social-icon" src="/img/logos/email.svg" alt="email"></a>
+          </div>
+        </nav>
+      </div>
+
+    <div class="container-all">
+      <div class="welcome">
+        <button class= "menu-button">
+          <img class="menu-hamburger" src="../img/logos/hamburger.png" alt="nav icon">
+          <img class="nav-close" src="../img/logos/closeicon.png" alt="close icon">
+        </button>
+      </div>
+
+      <div class="portfolio-page">
+        <div class="portfolio-page-header">
+          <div class="portfolio-page-title-box">
+            <h1 class="portfolio-page-title">BladeGunners</h1>
+            <h2 class="portfolio-page-subtitle">3rd year University project</h2>
+          </div>
+          <div class="tags">
+            <p class="tag-box">Team Size: 12</p>
+            <p class="tag-box">4 Months (in-dev)</p>
+            <p class="tag-box">C++</p>
+            <p class="tag-box">Unreal Engine 4</p>
+            <p class="tag-box">Git</p>
+          </div>
+        </div>
+
+        <div class="portfolio-page-content">
+          <div class="portfolio-page-content-section1">
+            <div class="container">
+              <h2 class="portfolio-page-content-project-details-title">Project Details</h2>
+              <p class="portfolio-page-content-project-details-text"> 
+                BladeGunners is a first-person, online arena shooter game. It utilises skating movement mechanics
+                to allow for rail grinding on certain objects in the arena which will charge up the player's energy-based weapon. Set in
+                the distant future where bullets are a thing of the past, private weapons manufacturers seek to covertly field test their
+                weapons through gameshow sponsorships. Players are placed into 2 teams of 4 and must face each other in a deathmatch for
+                the highly desired grand prize.
+              </p>
+              <div class="download">
+                <iframe class="download-desktop" frameborder="0" src="https://itch.io/embed/1262873?border_width=2&amp;bg_color=2c2f31&amp;fg_color=d1cfcd&amp;link_color=019aa5&amp;border_color=474d50" width="554" height="169"><a href="https://mediocrereality.itch.io/bladegunners">BladeGunners by MediocreReality</a></iframe>
+                <iframe class="download-mobile" frameborder="0" src="https://itch.io/embed/1262873?border_width=2&amp;bg_color=2c2f31&amp;fg_color=d1cfcd&amp;link_color=019aa5&amp;border_color=474d50" width="210" height="169"><a href="https://mediocrereality.itch.io/bladegunners">BladeGunners by MediocreReality</a></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-page-content-section2">
+            <div class="container">
+              <h2 class="portfolio-page-content-contribution-title">Gravity Simulation</h2>
+              <p class="portfolio-page-content-contribution-text">
+                For the simulation of the gravity I opted to use a rigidbody and Newton's law of gravitation to calculate the acceleration 
+                of the celestial bodies; as well as another formula to calculate the starting velocity of the celestial bodies so that they have 
+                enough speed to start an orbit around the star in the system. 
+                </p>
+              <img src="../img/games/SolarsystemShowcase.gif" alt="">
+            </div>
+          </div>
+
+          <div class="portfolio-page-content-section1">
+            <div class="container">
+              <h2 class="portfolio-page-content-contribution-title">Planet Generation</h2>
+              <p class="portfolio-page-content-contribution-text">
+                In order to store the data about the planets I used scriptable objects which would be used to store any infomation that needed to be 
+                calculated. The generation of the planets were then done by using constrained randomness based on the values calculated about each planet
+                and values in our sysetm. For instance the hill sphere is used to constrain how close/far the bodies moons can be.
+              </p>
+
+              <img src="../img/games/planetdata.png" alt="">
+            </div>
+          </div>
+
+          <div class="portfolio-page-content-section2">
+            <div class="container">
+              <h2 class="portfolio-page-content-contribution-title">What Went well</h2>
+              <p class="portfolio-page-content-contribution-text">
+                An area that went well in my opinion was the handling of the celestial bodies data as I used inheritance to create multiple types of scriptale 
+                objects for all the different bodies which allowed me to choose which data was needed by all the bodies and which was only needed by one type of body.<br><br>
+
+                Another area I'm happy with is the gravity simulation as it allows for any number of planets to be generated and all have gravity simulated around them and be 
+                affected by the other bodies that are in the scene which allows for the orbits to be disturbed.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio-page-content-section1">
+            <div class="container">
+              <h2 class="portfolio-page-content-contribution-title">What Could be improved</h2>
+              <p class="portfolio-page-content-contribution-text">
+                An area I would like to improve is the spawning of the planets so that they aren't all spawned in a row and instead are at random points around the star<br><br>
+
+                Another area I would want to improve on is some of the mesh generation as the planets are spawned with some terrain generated on to them; however, it was done 
+                close to the end so it was left to simply add some hills to the planets but I would have liked it to add crators on the moons.<br><br>
+
+                My final improvement would most likely be to change how the planets were spawned so that it wasn't constrained randomness as I feel that the solar system
+                usually looks very similar to past generations.
+              </p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src= "../js/nav.js"></script>
+  <script src= "../js/slideshow.js"></script>    
+    </body>
+</html>
