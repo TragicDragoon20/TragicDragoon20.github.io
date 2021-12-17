@@ -364,11 +364,6 @@ template {
   margin: 5px;
 }
 
-.tag-box:hover {
-  cursor: pointer;
-  border: 1px solid #E8E9EB;
-}
-
 body {
   color: #d1cfcd;
   font-family: "Merriweather", serif;
