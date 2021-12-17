@@ -11,26 +11,82 @@
     }
 }
 
+.grid{
+    @include mq($width: 90em){
+        display: grid;
+        grid-template-columns: repeat(2, 47.5%);
+        grid-template-rows: [heading-start] 10% [heading-end] 45% [text-end] 45%;
+        column-gap: 2.5%;
+    }
+}
 
+.portfolio-page-content-project-details-title{
+    grid-column: span 2;
+    place-self: center;
+}
+
+.portfolio-page-content-project-details{
+    background: $gray;
+    padding-bottom: 1em;
+    p{
+        grid-column: 1;
+        place-self: center;
+        grid-row: 2;
+    }
+    .download{
+        place-self: center;
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .trailer{
+        place-self: center;
+        height: 100%;
+        width: auto;
+        grid-column: 2;
+        grid-row-start: heading-end;
+        grid-row-end: span 2;
+    }
+}
+
+.portfolio-page-content-contribution-title{
+    grid-column: span 2;
+    place-self: center;
+}
 
 .portfolio-page-content-section1{
     background: $gray;
     padding-bottom: 1em;
+    p{
+        grid-column: 1;
+        place-self: center;
+    }
     img{
         height: 100%;
+        place-self: center;
+        grid-column: 2;
     }
 }
 
 .portfolio-page-content-section2{
     padding-bottom: 1em;
+    p{
+        grid-column: 1;
+        place-self: center;
+    }
     img{
         height: 100%;
+        place-self: center;
+        grid-column: 2;
     }
 }
+
 
 .container{
     padding-top: 2em;
     @include container($max-width: 50em);
+    @include mq($width: 90em){
+        @include container($max-width: 65em);
+    }
 }
 
 .portfolio-page-title{

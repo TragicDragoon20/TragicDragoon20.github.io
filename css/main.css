@@ -944,21 +944,95 @@ nav a {
   text-decoration: none;
 }
 
+@media (min-width: 90em) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (47.5%)[2];
+        grid-template-columns: repeat(2, 47.5%);
+    -ms-grid-rows: [heading-start] 10% [heading-end] 45% [text-end] 45%;
+        grid-template-rows: [heading-start] 10% [heading-end] 45% [text-end] 45%;
+    -webkit-column-gap: 2.5%;
+            column-gap: 2.5%;
+  }
+}
+
+.portfolio-page-content-project-details-title {
+  grid-column: span 2;
+  place-self: center;
+}
+
+.portfolio-page-content-project-details {
+  background: #474d50;
+  padding-bottom: 1em;
+}
+
+.portfolio-page-content-project-details p {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  place-self: center;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.portfolio-page-content-project-details .download {
+  place-self: center;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.portfolio-page-content-project-details .trailer {
+  place-self: center;
+  height: 100%;
+  width: auto;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: heading-end;
+      grid-row-start: heading-end;
+  -ms-grid-row-span: 2;
+      grid-row-end: span 2;
+}
+
+.portfolio-page-content-contribution-title {
+  grid-column: span 2;
+  place-self: center;
+}
+
 .portfolio-page-content-section1 {
   background: #474d50;
   padding-bottom: 1em;
 }
 
+.portfolio-page-content-section1 p {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  place-self: center;
+}
+
 .portfolio-page-content-section1 img {
   height: 100%;
+  place-self: center;
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
 .portfolio-page-content-section2 {
   padding-bottom: 1em;
 }
 
+.portfolio-page-content-section2 p {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  place-self: center;
+}
+
 .portfolio-page-content-section2 img {
   height: 100%;
+  place-self: center;
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
 .container {
@@ -966,6 +1040,14 @@ nav a {
   width: 90;
   margin: 0 auto;
   max-width: 50em;
+}
+
+@media (min-width: 90em) {
+  .container {
+    width: 90;
+    margin: 0 auto;
+    max-width: 65em;
+  }
 }
 
 .portfolio-page-title {
