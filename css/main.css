@@ -700,8 +700,8 @@ p {
     grid-row: 1 / span 2;
   }
   .featured .portfolio-title {
-    line-height: 3.7vw;
-    font-size: 3.7vw;
+    line-height: 3vw;
+    font-size: 3vw;
   }
   .featured .portfolio-desc {
     display: block;
