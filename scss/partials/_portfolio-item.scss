@@ -108,7 +108,7 @@
     padding-top: 2em;
     @include container($max-width: 50em);
     @include mq($width: 90em){
-        @include container($max-width: 65em);
+        @include container($max-width: 90em);
     }
 }
 
@@ -121,7 +121,7 @@
 }
 
 .portfolio-page-header{
-    padding-top: 2em;
+    padding: 2em;
     background: $dark-gray;
 }
 

@@ -98,7 +98,9 @@
             font-size: 3vw;
         }
         .portfolio-desc{
-            display: block;
+            @include mq{
+                display: block;
+            }
         }
     }
 }
