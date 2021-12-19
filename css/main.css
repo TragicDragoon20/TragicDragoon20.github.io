@@ -998,7 +998,7 @@ nav a {
   grid-row: 3;
 }
 
-.portfolio-page-content-project-details .trailer {
+.videos {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1016,12 +1016,24 @@ nav a {
 }
 
 @media (min-width: 90em) {
-  .portfolio-page-content-project-details .trailer {
+  .videos {
     margin-bottom: 0em;
   }
 }
 
-.portfolio-page-content-project-details .trailer iframe {
+.videos iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-row-span: 2;
+      grid-row-end: span 2;
+}
+
+.videos video {
   position: absolute;
   top: 0;
   left: 0;
@@ -1054,6 +1066,17 @@ nav a {
 }
 
 .portfolio-page-content-section1 img {
+  height: 100%;
+  place-self: center;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-row-span: 2;
+      grid-row-end: span 2;
+}
+
+.portfolio-page-content-section1 video {
   height: 100%;
   place-self: center;
   -ms-grid-column: 2;
