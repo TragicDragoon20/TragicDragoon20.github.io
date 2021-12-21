@@ -51,7 +51,9 @@ h3{
 p{
     font-size: .9em;
 }
-
+    b{
+        font-weight: $fw-b;
+    }
 
 .nav{
     @include mq($width: 70em){
