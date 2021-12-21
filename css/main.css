@@ -490,7 +490,7 @@ p {
   width: 90;
   margin: 0 auto;
   max-width: 70em;
-  padding: 3em;
+  padding: 3em 1em;
 }
 
 .about-me::after {
@@ -522,8 +522,8 @@ p {
   .about-me {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: [port-start] minmax(24em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
-        grid-template-columns: [port-start] minmax(24em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    -ms-grid-columns: [port-start] minmax(1fr) [name-start] minmax(6em, 1fr) [img-end] 1fr [port-end];
+        grid-template-columns: [port-start] minmax(1fr) [name-start] minmax(6em, 1fr) [img-end] 1fr [port-end];
     gap: .5em;
     -webkit-column-gap: 1em;
             column-gap: 1em;
@@ -1395,4 +1395,3 @@ nav a {
     }
   }
 }
-/*# sourceMappingURL=main.css.map */

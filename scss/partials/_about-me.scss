@@ -1,7 +1,7 @@
 .about-me{
     @include container($max-width: 70em);
     @include clearfix;
-    padding: 3em;
+    padding: 3em 1em;
 }
 
 .about-img{
@@ -23,7 +23,7 @@
 @supports(display: grid){
     .about-me{
         display: grid;
-        grid-template-columns: [port-start]minmax(24em, 1fr) [name-start]minmax(6em, 1fr) [img-end]2fr [port-end];
+        grid-template-columns: [port-start]minmax(1fr) [name-start]minmax(6em, 1fr) [img-end]1fr [port-end];
         gap: .5em;
         column-gap: 1em;
         @include mq($width: 60em){
