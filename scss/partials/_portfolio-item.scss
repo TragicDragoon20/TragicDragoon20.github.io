@@ -76,6 +76,8 @@
 .portfolio-page-content-contribution-title{
     grid-column: span 2;
     place-self: center;
+    padding-bottom: 1em;
+    margin-bottom: 0;
 }
 
 .portfolio-page-content-section1{
@@ -120,6 +122,22 @@
     }
 }
 
+.videoandimg{
+    img{
+        height: 100%;
+        place-self: center;
+        grid-column: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    video{
+        height: 100%;
+        place-self: center;
+        grid-column: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+}
 
 .container{
     padding-top: 2em;

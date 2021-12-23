@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Callum Metcalfe - Procedural Solar System</title>
+        <title>Callum Metcalfe - BladeGunners</title>
         <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
@@ -82,58 +82,88 @@
 
           <div class="portfolio-page-content-section1">
             <div class="container grid">
-              <h2 class="portfolio-page-content-contribution-title">Player Movement</h2>
-              <p class="portfolio-page-content-contribution-text">
-                In order to store the data about the planets I used scriptable objects which would be used to store any infomation that needed to be 
-                calculated. The generation of the planets were then done by using constrained randomness based on the values calculated about each planet
-                and values in our sysetm. For instance the hill sphere is used to constrain how close/far the bodies moons can be.
-              </p>
+              <h2 class="portfolio-page-content-contribution-title">Player Movement </h2>
+              <p>
+              The first mechanic I worked on for BladeGunners was the player movement system. As we wanted to try and simulate roller skating, 
+              this meant that we wanted to let the player to get to a top speed through regular means but then be able to move faster than this speed 
+              when utilising different options within the levels this included the rail grinding, half pipes and slopes. <br><br>
 
+              As this project is still in development the conservation of momentum is still a work in progress that has not yet been fully explored. 
+              However, the basics of the movement allowing for a more “floatier” feel has been worked on which stops players from coming to an instant stop
+              and adds more of a circular cornering compared to other systems where you don’t build speed and instead have a much more linear 
+              path when moving round a corner.
+              </p>
               <div class="videos">
-                <video width="100%" height="100%" controls autoplay loop src="../img/games/Weapons2.mp4" type="video/mp4"></video>
+                <video width="100%" height="100%" controls autoplay muted loop src="../img/games/BladeGunners/BladegunnersMovement.mp4" type="video/mp4"></video>
               </div>
             </div>
           </div>
 
           <div class="portfolio-page-content-section2">
             <div class="container grid">
-              <h2 class="portfolio-page-content-contribution-title">Weapons</h2>
+              <h2 class="portfolio-page-content-contribution-title">Weapon System</h2>
               <p class="portfolio-page-content-contribution-text">
-                In order to store the data about the planets I used scriptable objects which would be used to store any infomation that needed to be 
-                calculated. The generation of the planets were then done by using constrained randomness based on the values calculated about each planet
-                and values in our sysetm. For instance the hill sphere is used to constrain how close/far the bodies moons can be.
+                The next mechanic that was my main goal was the weapon system as we wanted to have three weapons in by the end of study block one, 
+                this included the assault rifle, shotgun, and sniper rifle. We wanted these three weapons in first as this gives us the basics of our weapon diversity 
+                as they are the weapons commonly found in arena shooters. On top of these three weapons, we are also looking to include a pistol, 
+                DMR and rocket launcher. <br><br>
+
+                To build the weapon system effectively I utilised inheritance to create the base weapon C++ class that each weapon would 
+                inherit from to create their own C++ class before making a blueprint of those classes. 
+                The weapons can then be used by myself and other members of the team to balance and modify weapons. <br><br>
+
+                On top of the making the weapons functional I also worked on developing a recoil system, 
+                which utilises the built in UE4 timelines to move the players camera to create a recoil pattern. 
+                On top of this I added bullet spread so that the bullets don’t always hit the same point when fired but follow a pattern so 
+                that its more predictable where they will be landing. 
+                Additional functionality includes adding the ability to ADS with the sniper rifle and the spread shot on the shotgun. 
               </p>
 
-              <div class="videos">
-                <video width="100%" height="100%" controls autoplay loop src="../img/games/Weapons2.mp4" type="video/mp4"></video>
+              <div class="videoandimg">
+
+                <img src="../img/games/BladeGunners/WeaponPlanning.png" alt="">
+
+                <video width="100%" height="100%" controls autoplay muted loop src="../img/games/Weapons2.mp4" type="video/mp4"></video>
               </div>
             </div>
           </div>
 
           <div class="portfolio-page-content-section1">
-            <div class="container">
-              <h2 class="portfolio-page-content-contribution-title">What Went well</h2>
+            <div class="container grid">
+              <h2 class="portfolio-page-content-contribution-title">Networking</h2>
               <p class="portfolio-page-content-contribution-text">
-                An area that went well in my opinion was the handling of the celestial bodies data as I used inheritance to create multiple types of scriptable  
-                objects for all the different bodies which allowed me to choose which data was needed by all the bodies and which was only needed by one type of body.<br><br>
+                As BladeGunners is an online first-person shooter, it’s meant that it’s my first project to include any type of online networking. 
+                This has meant I’ve had to investigate what actions should be done client side, server side and on both ends to create systems that work over network. <br><br>
 
-                Another area I'm happy with is the gravity simulation as it allows for any number of planets to be generated and all have gravity simulated around them and be 
-                affected by the other bodies that are in the scene which allows for the orbits to be disturbed.
+                All the mechanics that have currently been implemented have also manged to be fully networked. 
+                With this being a new area for our team we have all sat down and helped each other with networking to ensure that systems work correctly 
+                including prototype systems such as the rail grinding.
               </p>
+              <img src="../img/games/BladeGunners/WeaponPlanning.png" alt="">
             </div>
           </div>
 
           <div class="portfolio-page-content-section2">
             <div class="container">
+              <h2 class="portfolio-page-content-contribution-title">What's Gone well</h2>
+              <p class="portfolio-page-content-contribution-text">
+                As a team I think that we all did an amazing job to pick up the engine quite quickly in our first study block
+                and support each other with areas that others are unfamiliar with, as for the majority of the team it was their first time using Unreal Engine.<br><br>
+
+                Personally, I am happy with how the weapon system is turning out as it allows for a lot of tweaks to be made through the blueprints
+                which allows for multiple weapons to be created based off the same type of weapon which may want a different different recoil pattern, rate of fire, etc.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio-page-content-section1">
+            <div class="container">
               <h2 class="portfolio-page-content-contribution-title">What Could be improved</h2>
               <p class="portfolio-page-content-contribution-text">
-                An area I would like to improve is the spawning of the planets so that they aren't all spawned in a row and instead are at random points around the star<br><br>
-
-                Another area I would want to improve on is some of the mesh generation as the planets are spawned with some terrain generated on to them; however, it was done 
-                close to the end so it was left to simply add some hills to the planets but I would have liked it to add crators on the moons.<br><br>
-
-                My final improvement would most likely be to change how the planets were spawned so that it wasn't constrained randomness as I feel that the solar system
-                usually looks very similar to past generations.
+                So far during our first study block we have had a lack of playtesting due to hardware and software limitations that we were unaware of at the start of 
+                the project. This included not being able to test over a LAN connection in the University's facilities due to firewall issues, as well as not doing our 
+                reasearch with how to create a server only build so that we could run a dedicated server to playtest on, as this required a source build of UE4 which we 
+                eventually solved close to the end of the study block. <br><br> 
               </p>
             </div>
           </div>
