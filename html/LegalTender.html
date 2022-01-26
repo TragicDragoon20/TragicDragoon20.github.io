@@ -100,7 +100,12 @@
               <div class="container grid">
                 <h2 class="portfolio-page-content-contribution-title">Ability System</h2>
                 <p>
-                
+                  In addition to the weapon system, 
+                  I also worked on the ability system which was set up in a similar way to the weapon system where basic information is stored in the 
+                  scriptable object for the cooldown. The scripts themselves are then are children of a parent ability class that add the extra data 
+                  that is needed for each of the abilities in which we had 4 different ones. <br><br>
+
+                  These abilities ranged from a charge that had impact damage, a weapon with bouncing bullets, a special grenade and player stat increases. 
                 </p>
                 <div class="videoandimg">
                   <img src="../img/games/LegalTender/abilitysystem.png" alt="">
@@ -113,7 +118,13 @@
               <div class="container grid">
                 <h2 class="portfolio-page-content-contribution-title">Enemy AI</h2>
                 <p>
-                
+                  For the enemy AI I used a state machine that utilised scriptable objects to define each state as this would allow 
+                  for each state to be easily edited in the inspector, allowing for each state to have list of actions that would be performed 
+                  as well as a list of decisions which would determine whether the state should be remained in or transition to another state.<br><br>
+
+                  This therefore allowed different actions and decisions to be made that would use the same scriptable object class but have different values within them, 
+                  for instance the “DistanceDecision” could be used to check if the AI got too close to the player but could also be used to check if they were too 
+                  far away and if the AI should stop following the player.
                 </p>
                   <img src="../img/games/LegalTender/EnemyStates.png" alt="">
               </div>
@@ -121,25 +132,27 @@
 
             <div class="portfolio-page-content-section2">
               <div class="container">
-                <h2 class="portfolio-page-content-contribution-title">What's Gone well</h2>
+                <h2 class="portfolio-page-content-contribution-title">What went well</h2>
                 <p class="portfolio-page-content-contribution-text">
-                  As a team I think that we all did an amazing job to pick up the engine quite quickly in our first study block
-                  and support each other with areas that others are unfamiliar with, as for the majority of the team it was their first time using Unreal Engine.<br><br>
+                  In the early stages of development an Event System was designed by another programmer. 
+                  This system became one of the core systems utilised throughout the project as it allowed us to reduce the number of dependencies 
+                  within our code base and allowed for other disciplines to expand off events that are already in place such as taking damage.<br><br>
   
-                  Personally, I am happy with how the weapon system is turning out as it allows for a lot of tweaks to be made through the blueprints
-                  which allows for multiple weapons to be created based off the same type of weapon which may want a different different recoil pattern, rate of fire, etc.
+                  In general, I feel the weapons worked quite well allowing for many variants to be created and allow for more weapon classes to be developed 
+                  with the main improvement needed being the weapon UX for when the weapons are reloading.
                 </p>
               </div>
             </div>
   
             <div class="portfolio-page-content-section1">
               <div class="container">
-                <h2 class="portfolio-page-content-contribution-title">What Could be improved</h2>
+                <h2 class="portfolio-page-content-contribution-title">What could have been improved</h2>
                 <p class="portfolio-page-content-contribution-text">
-                  So far during our first study block we have had a lack of playtesting due to hardware and software limitations that we were unaware of at the start of 
-                  the project. This included not being able to test over a LAN connection in the University's facilities due to firewall issues, as well as not doing our 
-                  reasearch with how to create a server only build so that we could run a dedicated server to playtest on, as this required a source build of UE4 which we 
-                  eventually solved close to the end of the study block. <br><br> 
+                  A improvement I that would have helped the game massively in looks is getting art assets in earlier on to allow for multiple art passes
+                  to be done rather than waiting closer to the end which is when the game felt like it was taking shape. <br><br> 
+
+                  Another improvement would have been to redo some AI states as when the AI states were designed it was with the Idea of stealth being involved 
+                  in the early stages of the heist, so as the game progressed the stealth became less relevant leaving the AI in a confusing state.
                 </p>
               </div>
             </div>
