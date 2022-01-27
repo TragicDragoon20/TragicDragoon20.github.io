@@ -973,6 +973,7 @@ nav a {
         grid-template-rows: [heading-start] 10% [heading-end] 45% [text-end] 45%;
     -webkit-column-gap: 2.5%;
             column-gap: 2.5%;
+    text-align: left;
   }
 }
 

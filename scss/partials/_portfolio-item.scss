@@ -17,6 +17,7 @@
         grid-template-columns: repeat(2, 47.5%);
         grid-template-rows: [heading-start] 10% [heading-end] 45% [text-end] 45%;
         column-gap: 2.5%;
+        text-align: left;
     }
 }
 
