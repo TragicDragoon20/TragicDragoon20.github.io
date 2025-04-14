@@ -7,105 +7,60 @@
         <title>Callum Metcalfe - Portfolio</title>
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
-
+    <body class="body">
       <div class="nav">
-        <nav>
-          <ul>
-            <li><a href="#about">about</a></li>
-            <li><a href="#portfolio">portfolio</a></li>
-            <li><a href="../img/CallumMetcalfe-Resume.pdf"  target="_blank">Résumé</a></li>
-          </ul>
-          <div class="social-icons">
-            <a class="social-icon" href="https://github.com/TragicDragoon20"><img  src="/img/logos/github.svg" alt="github"></a>
-            <a class="social-icon" href="https://twitter.com/TragicDragoon_"><img src="/img/logos/twitter.svg" alt="twitter"></a>
-            <a class="social-icon" href="https://www.linkedin.com/in/callum-metcalfe-6863591a8/"><img src="/img/logos/linkdin.svg" alt="linkedin"></a>
-            <a class="social-icon" href="mailto:callumjmetcalfe@outlook.com"><img src="/img/logos/email.svg" alt="email"></a>
+        <div class = "content">
+          <div class ="navigation-items">
+            <div class = "content">
+              <div class ="navigation-wrap">
+                  <nav role="navigation" class="navigation-items navigation-menu">
+                    <a href="/" aria-current="page" class="navigation-item navigation-link navigation-item-current">Home</a>
+                    <a href="../img/CallumMetcalfe-Resume.pdf"  target="_blank" class="navigation-item navigation-link">Résumé</a>
+                  </nav> 
+              </div>
+            </div>
           </div>
-        </nav>
-        
+        </div>
       </div>
 
-      <div class="container-all">
-        <div class="welcome">
-          <button class= "menu-button">
-            <img class="menu-hamburger" src="img/logos/hamburger.png" alt="nav icon">
-            <img class="nav-close" src="img/logos/closeicon.png" alt="close icon">
-          </button>
+      <div class="content">
+        <div class="section">
+          <div class="container">
+            <div class="intro-wrap">
+              <div class = name-text> Callum Metcalfe</div>
+              <div class="paragraph-light">Gameplay Programmer</div>
+              <h1 class="paragraph-bigger">
+                I'm a software engineer from the United Kingdom. Currently I am a junior programmer at Rebellion with an (2:1) science degree in Computing.
+                Originally from the North East moving to Cornwall for university and currently in the North West. 
+                My main language of choice is C++ where my main focus tends to be on gameplay. 
+                <br>
+                <br>
+                Outside of work I enjoy reading, playing games and bouldering.
+              </h1>
+            </div>
+          </div>
         </div>
 
-        <section class="about-me" id="about">
-          <img class="about-img" src="img/working-me.jpg" alt="Photo Of me">
-          <h1 class="about-title">Callum Metcalfe</h1>
-          <h2 class="about-subtitle">Game Programmer</h2>
-          <div class="about-text">
-            <p>
-              My name is Callum Metcalfe, and I am a Game Programmer who recently graduated on the BSc (Hons) Computing for Games course at Falmouth University. 
-              My main areas of Games Programming is Gameplay and AI Programming.
-              
-            </p>
+        <div class="section">
+          <div class="container">
+            <h1 class="heading-3">Projects</h1>
+            <div class = "layout-grid grid">
+                <a id="Portfolio-1" href="html/bladegunners.html" class="work-image work-1 work-featured inline-block"></a>
+                <a id="Portfolio-2" href="html/TumbleTown.html" class="work-image work-2 inline-block"></a>
+                <a id="Portfolio-3" href="html/MeshGeneration.html" class="work-image work-3 inline-block"></a>
+                <a id="Portfolio-4" href="html/ProcSystem.html" class="work-image work-4 inline-block"></a>
+                <a id="Portfolio-5" href="html/LegalTender.html" class="work-image work-5 inline-block"></a>
+            </div>
           </div>
-        </section>
+        </div>
+      </div>
 
-        <section class="portfolio" id="portfolio">
-          <h1>Portfolio</h1>
-          <div class="portfolio-items">
-            <!-- Portfolio Item 1-->
-            <figure class="portfolio-item ">
-              <img src="img/games/TumbleTown.png" alt="">
-              <figcaption>
-                <h2 class="portfolio-title">Tumble Town</h2>
-                <p class="portfolio-desc">Created by a small team of 4 during the plymouth game jam 2020</p>
-                <a href="html/TumbleTown.html" class ="portfolio-link">More Info</a>
-              </figcaption>
-            </figure>
-
-            <!-- Portfolio Item 2-->
-            <figure class="portfolio-item ">
-              <img src="img/games/MeshGeneration.png" alt="">
-              <figcaption>
-                <h2 class="portfolio-title">Mesh Generation</h2>
-                <p class="portfolio-desc">Short Description</p>
-                <a href="html/MeshGeneration.html" class="portfolio-link">More Info</a>
-              </figcaption>
-            </figure>
-
-            <!-- Portfolio Item 3-->
-            <figure class="portfolio-item">
-              <img src="img/games/SolarSystem.png" alt="">
-              <figcaption>
-                <h2 class="portfolio-title">Procedural Planetary System</h2>
-                <p class="portfolio-desc">A solo project for my AI module</p>
-                <a href="html/ProcSystem.html" class="portfolio-link">More Info</a>
-              </figcaption>
-            </figure>
-
-            <!-- Portfolio Item 4-->
-            <figure class="portfolio-item">
-              <img src="img/games/legalTenderBanner.png" alt="">
-              <figcaption>
-                <h2 class="portfolio-title">Legal Tender</h2>
-                <p class="portfolio-desc">Short Description</p>
-                <a href="html/LegalTender.html" class="portfolio-link">More Info</a>
-              </figcaption>
-            </figure>
-
-            <!-- Portfolio Item 5-->
-            <figure class="portfolio-item featured">
-              <img src="img/games/bladegunners-card" alt="Mediocre Reality">
-              <figcaption>
-                <h2 class="portfolio-title">BladeGunners</h2>
-                <p class="portfolio-desc">BladeGunners is a first-person, online arena shooter game. It utilises skating movement mechanics
-                   to allow for rail grinding on certain objects in the arena which will charge up the player's energy-based weapon. Set in
-                    the distant future where bullets are a thing of the past, private weapons manufacturers seek to covertly field test their
-                     weapons through gameshow sponsorships. Players are placed into 2 teams of 4 and must face each other in a deathmatch for
-                      the highly desired grand prize.</p>
-                <a href="html/bladegunners.html" class="portfolio-link">More Info</a>
-              </figcaption>
-            </figure>
-
-       
-      <script src= "js/nav.js"></script>
-      <script src= "js/slideshow.js"></script>    
+      <div class="footer-wrap">
+        <div class="footer-links">
+          <a href="https://github.com/TragicDragoon20" target="_blank" class="footer-item">Github</a>
+          <a href="https://twitter.com/TragicDragoon_" target="_blank" class="footer-item">Twitter</a>
+          <a href="http://www.linkedin.com/in/callum-metcalfe" target="_blank" class="footer-item">Linkedin</a>
+        </div>
+      </div>
     </body>
 </html>

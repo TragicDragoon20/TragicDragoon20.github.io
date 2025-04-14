@@ -4,165 +4,118 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Callum Metcalfe - Legal Tender</title>
+        <title>Callum Metcalfe - LegalTender</title>
         <link rel="stylesheet" href="/css/main.css">
     </head>
-    <body>
+    <body class="body">
       <div class="nav">
-        <nav>
-          <ul>
-            <li><a href="../index.html">about</a></li>
-            <li><a href="../index.html#portfolio ">portfolio</a></li>
-            <li><a href="../img/CallumMetcalfe-Resume.pdf"  target="_blank">Résumé</a></li>
-          </ul>
-          <div class="social-icons">
-            <a href="https://github.com/TragicDragoon20"><img class="social-icon" src="/img/logos/github.svg" alt="github"></a>
-            <a href="https://twitter.com/TragicDragoon_"><img class="social-icon" src="/img/logos/twitter.svg" alt="twitter"></a>
-            <a href="https://www.linkedin.com/in/callum-metcalfe-6863591a8/"><img class="social-icon" src="/img/logos/linkdin.svg" alt="linkedin"></a>
-            <a href="mailto:callumjmetcalfe@outlook.com"><img class="social-icon" src="/img/logos/email.svg" alt="email"></a>
+        <div class = "content">
+          <div class ="navigation-items">
+            <div class = "content">
+              <div class ="navigation-wrap">
+                  <nav role="navigation" class="navigation-items navigation-menu">
+                    <a href="/" aria-current="page" class="navigation-item navigation-link">Home</a>
+                    <a href="../img/CallumMetcalfe-Resume.pdf"  target="_blank" class="navigation-item navigation-link">Résumé</a>
+                  </nav> 
+              </div>
+            </div>
           </div>
-        </nav>
+        </div>
       </div>
 
-    <div class="container-all">
-      <div class="welcome">
-        <button class= "menu-button">
-          <img class="menu-hamburger" src="../img/logos/hamburger.png" alt="nav icon">
-          <img class="nav-close" src="../img/logos/closeicon.png" alt="close icon">
-        </button>
+      <div class="section">
+        <div class="container">
+          <div class="layout-grid project-overview-grid">
+            <div id="Project-Header-Box" class="Project-Header-Box">
+              <h1 class="Project-Header">Legal Tender</h1>
+              <div>
+                <div class="tag-container">
+                  <div class="tag-box">
+                    <div class="tag">C#</div>
+                  </div>
+                  <div class="tag-box">
+                    <div class="tag">Unity</div>
+                  </div>
+                    <div class="tag-box">
+                      <div class="tag">Git</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="Project-Overview-Box">
+              <div class="Project-Overview">Project Overview</div>
+              <p class="paragraph-bigger">
+                Four different players, raiding a bank. What could go wrong? In a game filled with deception and lack of trust, who will make it out with the most cash? A four-player couch co-op heist game. Your goal is to steal the most amount of money, working with or against your fellow criminals.
+              </p>
+              <div class="Itchio-Desktop">
+                <iframe class="download-desktop" frameborder="0" src="https://itch.io/embed/874346?border_width=2&bg_color=2c2f31&fg_color=d1cfcd&link_color=019aa5&border_color=474d50" width="554" height="169">…</iframe>
+              </div>
+              <div class="Itchio-Mobile">
+                <iframe class="download-mobile" frameborder="0" src="https://itch.io/embed/874346?border_width=2&bg_color=2c2f31&fg_color=d1cfcd&link_color=019aa5&border_color=474d50" width="210" height="169">…</iframe>
+            </div>
+          </div>
+
+          <div id="Project-Trailer-Box">
+            <div class="Video-Trailer">
+              <iframe src="https://www.youtube.com/embed/_X7U9-2txI0?rel=0&controls=1&autoplay=0&mute=0&start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen title="Legal Tender - Trailer"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="portfolio-page">
-        <div class="portfolio-page-header">
-          <div class="portfolio-page-title-box">
-            <h1 class="portfolio-page-title">Legal Tender</h1>
-            <h2>2nd Year University Project</h2>
-          </div>
-          <div class="tags">
-            <p class="tag-box">1 Year</p>
-            <p class="tag-box">Team</p>
-            <p class="tag-box">C#</p>
-            <p class="tag-box">Unity</p>
-            <p class="tag-box">Git</p>
+      <div class="section">
+        <div class="container video">
+          <div class="layout-grid project-description-grid">
+            <div id="Project-Description-Box">
+              <div class="Project-Overview">Weapon System</div>
+            </div>
+            <p id="description-text" class="paragraph-bigger">One area I worked on for legal tender was the weapon system. For this system I utilised scriptable objects to hold and store the data of each weapon. I made use of inheritance to create a parent weapon data object which held data that would be used by all the weapons, whilst creating child classes that would add the extra data needed for the different types of weapons.For the system I also created a base weapon class which had all the weapon functionality, this was then used to create child classes which would alter the weapon fire function in order to create the different weapons we wanted within the game. This included an assault rifle, burst rifle, shotgun, pistol and a grenade launcher.</p>
+            <div id="movement-gif" class="embed-mp4">
+              <video width="100%" height="100%" autoplay muted loop src="https://dl.dropboxusercontent.com/s/n9dik0zp3f6jij0/LegalTenderWeapons.mp4?dl=0" type="video/mp4"></video>
+            </div>
           </div>
         </div>
 
-          <div class="portfolio-page-content">
-            <div class="portfolio-page-content-project-details">
-              <div class="container grid">
-                <h2 class="portfolio-page-content-project-details-title">Project Introduction</h2>
-                <p class="portfolio-page-content-project-details-text"> 
-                  Four different players, raiding a bank. What could go wrong? In a game filled with deception and lack of trust, who will make it out with the most cash? <br><br>
-                  A four-player couch co-op heist game. Your goal is to steal the most amount of money, working with or against your fellow criminals.
-                </p>
-                <div class="videos">
-                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_X7U9-2txI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="download">
-                  <iframe class="download-desktop" frameborder="0" src="https://itch.io/embed/874346?border_width=2&amp;bg_color=2c2f31&amp;fg_color=d1cfcd&amp;link_color=019aa5&amp;border_color=474d50" width="554" height="169"><a href="https://low-poly-platypus.itch.io/legal-tender">Legal Tender by Low Poly Platypus, katehookham, Heathage, Benjamin Emdon, SummerBosley, BubblezFever, Christopher Robertson, Callum Metcalfe</a></iframe>
-                  <iframe class="download-mobile" frameborder="0" src="https://itch.io/embed/874346?border_width=2&amp;bg_color=2c2f31&amp;fg_color=d1cfcd&amp;link_color=019aa5&amp;border_color=474d50" width="210" height="169"><a href="https://low-poly-platypus.itch.io/legal-tender">Legal Tender by Low Poly Platypus, katehookham, Heathage, Benjamin Emdon, SummerBosley, BubblezFever, Christopher Robertson, Callum Metcalfe</a></iframe>
-                </div>
-              </div>
+        <div class="container video">
+          <div class="layout-grid project-description-grid">
+            <div id="Project-Description-Box">
+              <div class="Project-Overview">Ability System</div>
             </div>
-
-            <div class="portfolio-page-content-section2">
-              <div class="container">
-                <h2 class="portfolio-page-content-contribution-title">My Contribution</h2>
-                <p class="portfolio-page-content-contribution-text">
-                  <b>Low-Poly Platypus</b> was a <b>2nd year team</b> formed by 15 members, this included 
-                  <b>3 Programmers, 3 Designers, 2 3D Modellers, 4 Artists, 1 Writer, 1 Animator and 1 Audio Designer</b>. As a team we worked on <b>Legal Tender</b> <br><br>
-
-                  For <b>Legal Tender</b> my main role was a <b>gameplay</b> and <b>AI programmer</b>. This included working on the <b>weapon system, ability system</b> and the <b>enemy AI</b>.
-                </p>
-              </div>
+            <p id="description-text" class="paragraph-bigger">In addition to the weapon system, I also worked on the ability system which was set up in a similar way to the weapon system where basic information is stored in the scriptable object for the cooldown. The scripts themselves are then are children of a parent ability class that add the extra data that is needed for each of the abilities in which we had 4 different ones. These abilities ranged from a charge that had impact damage, a weapon with bouncing bullets, a special grenade and player stat increases.</p>
+            <div id="movement-gif" class="embed-mp4">
+              <video width="100%" height="100%" autoplay muted loop src="https://dl.dropboxusercontent.com/s/790bhr7onnij78p/LegalTenderKacieAbility.mp4?dl=0" type="video/mp4"></video>
             </div>
+          </div>
+        </div>
 
-            <div class="portfolio-page-content-section1">
-              <div class="container grid">
-                <h2 class="portfolio-page-content-contribution-title">Weapon System</h2>
-                <p>
-                  One area I worked on for legal tender was the weapon system. For this system I utilised scriptable objects to hold and store the data of each weapon. 
-                  I made use of inheritance to create a parent weapon data object which held data that would be used by all the weapons, 
-                  whilst creating child classes that would add the extra data needed for the different types of weapons. <br><br>
-
-                  For the system I also created a base weapon class which had all the weapon functionality, 
-                  this was then used to create child classes which would alter the weapon fire function in order to create the different weapons we wanted within the game. 
-                  This included an assault rifle, burst rifle, shotgun, pistol and a grenade launcher.
-                </p>
-                  <div class="videoandimg">
-                    <img src="../img/games/LegalTender/weaponobject.png" alt="">
-                    <video width="100%" height="100%" controls autoplay muted loop src="../img/games/LegalTender/LegalTenderWeapons.mp4" type="video/mp4"></video>
-                </div>
+        <div class="container">
+          <div class="w-layout-grid project-description-grid">
+            <div id="Project-Description-Box">
+              <div class="Project-Overview">What went well</div>
             </div>
+            <p id="description-text" class="paragraph-bigger"> ◇ In the early stages of development an Event System was designed by another programmer. This system became one of the core systems utilised throughout the project as it allowed us to reduce the number of dependencies within our code base and allowed for other disciplines to expand off events that are already in place such as taking damage.<br><br> ◇ In general, I feel the weapons worked quite well allowing for many variants to be created and allow for more weapon classes to be developed with the main improvement needed being the weapon UX for when the weapons are reloading.</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="w-layout-grid project-description-grid">
+            <div id="Project-Description-Box">
+              <div class="Project-Overview">What could have been improved</div>
             </div>
+            <p id="description-text" class="paragraph-bigger"> ◇ An improvement I that would have helped the game massively in looks is getting art assets in earlier on to allow for multiple art passes to be done rather than waiting closer to the end which is when the game felt like it was taking shape.<br><br> ◇ Another improvement would have been to redo some AI states as when the AI states were designed it was with the Idea of stealth being involved in the early stages of the heist, so as the game progressed the stealth became less relevant leaving the AI in a confusing state.</p>
+          </div>
+        </div>
 
-            <div class="portfolio-page-content-section2">
-              <div class="container grid">
-                <h2 class="portfolio-page-content-contribution-title">Ability System</h2>
-                <p>
-                  In addition to the weapon system, 
-                  I also worked on the ability system which was set up in a similar way to the weapon system where basic information is stored in the 
-                  scriptable object for the cooldown. The scripts themselves are then are children of a parent ability class that add the extra data 
-                  that is needed for each of the abilities in which we had 4 different ones. <br><br>
+      </div> <!--Section End-->
 
-                  These abilities ranged from a charge that had impact damage, a weapon with bouncing bullets, a special grenade and player stat increases. 
-                </p>
-                <div class="videoandimg">
-                  <img src="../img/games/LegalTender/abilitysystem.png" alt="">
-                  <video width="100%" height="100%" controls autoplay muted loop src="../img/games/LegalTender/LegalTenderKacieAbility.mp4" type="video/mp4"></video>
-                </div>
-              </div>
-            </div>
-
-            <div class="portfolio-page-content-section1">
-              <div class="container grid">
-                <h2 class="portfolio-page-content-contribution-title">Enemy AI</h2>
-                <p>
-                  For the enemy AI I used a state machine that utilised scriptable objects to define each state as this would allow 
-                  for each state to be easily edited in the inspector, allowing for each state to have list of actions that would be performed 
-                  as well as a list of decisions which would determine whether the state should be remained in or transition to another state.<br><br>
-
-                  This therefore allowed different actions and decisions to be made that would use the same scriptable object class but have different values within them, 
-                  for instance the “DistanceDecision” could be used to check if the AI got too close to the player but could also be used to check if they were too 
-                  far away and if the AI should stop following the player.
-                </p>
-                  <img src="../img/games/LegalTender/EnemyStates.png" alt="">
-              </div>
-            </div>
-
-            <div class="portfolio-page-content-section2">
-              <div class="container">
-                <h2 class="portfolio-page-content-contribution-title">What went well</h2>
-                <p class="portfolio-page-content-contribution-text">
-                  In the early stages of development an Event System was designed by another programmer. 
-                  This system became one of the core systems utilised throughout the project as it allowed us to reduce the number of dependencies 
-                  within our code base and allowed for other disciplines to expand off events that are already in place such as taking damage.<br><br>
-  
-                  In general, I feel the weapons worked quite well allowing for many variants to be created and allow for more weapon classes to be developed 
-                  with the main improvement needed being the weapon UX for when the weapons are reloading.
-                </p>
-              </div>
-            </div>
-  
-            <div class="portfolio-page-content-section1">
-              <div class="container">
-                <h2 class="portfolio-page-content-contribution-title">What could have been improved</h2>
-                <p class="portfolio-page-content-contribution-text">
-                  A improvement I that would have helped the game massively in looks is getting art assets in earlier on to allow for multiple art passes
-                  to be done rather than waiting closer to the end which is when the game felt like it was taking shape. <br><br> 
-
-                  Another improvement would have been to redo some AI states as when the AI states were designed it was with the Idea of stealth being involved 
-                  in the early stages of the heist, so as the game progressed the stealth became less relevant leaving the AI in a confusing state.
-                </p>
-              </div>
-            </div>
-
+      <div class="footer-wrap">
+        <div class="footer-links">
+          <a href="https://github.com/TragicDragoon20" target="_blank" class="footer-item">Github</a>
+          <a href="https://twitter.com/TragicDragoon_" target="_blank" class="footer-item">Twitter</a>
+          <a href="http://www.linkedin.com/in/callum-metcalfe" target="_blank" class="footer-item">Linkedin</a>
         </div>
       </div>
-    </div>
 
-
-    <script src= "../js/nav.js"></script>
-    <script src= "../js/slideshow.js"></script>    
     </body>
 </html>

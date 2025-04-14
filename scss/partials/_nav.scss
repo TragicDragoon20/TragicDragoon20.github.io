@@ -13,131 +13,102 @@
     }
 }
 
-nav{
-    position: fixed;
-    background: $nav-bar-black;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 20%;
-    z-index: 5;
-    height: 100vh;
-    transform: translateX(-100%);
-    transition: transform ease-out 250ms;
-    @include mq($width: 70em){
-        position: sticky;
-        transform: translateX(0);
-        right: 0;
-    }
-}
-
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.nav{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    
-
-    @include mq($width: 70em){
-        justify-content: start;
-    }
-}
-
-nav li{
-    text-align: center;
-    &:not(:last-of-type){
-        border-bottom: 1px solid $dark-blue;
-        @include mq($width: 70){
-            border: none;
-        }
-    }
-    @include mq($width: 70em){
-        &:is(:first-child){
-            margin-top: 3em;
-        }
-        padding-top: 0.7em;
-        padding-bottom: 0.7em;
-    }
-}
-
-nav li:hover{
-    background: $accent;
-}
-
-nav a{
-    display: inline-block;
-    @include sans-serif($fs: 3rem, $colour: $white);
-    text-decoration: none;
-    padding: calc(100vh/8) 0;
-    line-height: 0;
-    width: 100%;
-
-    @include mq($width: 70em){
-        @include sans-serif($fs: 2vw, $colour: $white);
-        padding: 0;
-    }
-}
-
-
-
-.nav-close{
-    display: none;
-}
-
-.nav-is-open{
-    height: 100vh;
-    overflow-y: hidden;
-
-    nav{
-        transform: translateX(0);
-    }
-    .container-all{
-        transform: translateX(80%);
-        overflow-y: hidden;
-    }
-    .nav-close{
-        display: block;
-    }
-    .menu-hamburger{
-        display: none;
-    }
-    .menu-button{
-        transform: translateX(-70%);
-    }
-}
-
-.social-icons{
-    position: absolute;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    padding: 30px 50px;
     align-items: center;
-    padding: 0;
-    margin-top: 2vh;
-    margin-bottom: auto;
-    width: 100%;
-    @include mq($width: 70em){
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 20%);
-        gap: 0em;
-    }
+    position: relative;
+    background: $nav-bar-black;
+
 }
-.social-icon{
-    max-width: 20%;
-    padding: 0em;
-    @include mq($width: 70em){
-        display: flex;
-        margin: auto;
-        justify-content: center;
-        align-self: center;
-        max-width: 100%;
-    }
+
+.navigation-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 auto;
+    text-align: left;
 }
-.social-icon:hover{
-    background: $accent;
+
+.navigation-wrap{
+    display: flex;
+    margin-right: -20px;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: auto;
+    order: 0;
+    flex: 0 1 auto;
 }
+
+.navigation-menu{
+    position: relative;
+    float: right;
+}
+
+.navigation-link{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: #222222;
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navigation-item{
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border: 1px solid transparent;
+    opacity: 0.9;
+    -webkit-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+    color: #f3f3f3;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    mix-blend-mode: normal;
+}
+
+.navigation-item-current{
+    opacity: 1;
+    font-family: Play, sans-serif;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 1px 1px 6px #000;
+    mix-blend-mode: normal;
+}
+
+
+// nav li:hover{
+//     background: $accent;
+// }
+
+// .nav-close{
+//     display: none;
+// }
+
+// .nav-is-open{
+//     height: 100vh;
+//     overflow-y: hidden;
+
+//     nav{
+//         transform: translateX(0);
+//     }
+//     .container-all{
+//         transform: translateX(80%);
+//         overflow-y: hidden;
+//     }
+//     .nav-close{
+//         display: block;
+//     }
+//     .menu-hamburger{
+//         display: none;
+//     }
+//     .menu-button{
+//         transform: translateX(-70%);
+//     }
+// }

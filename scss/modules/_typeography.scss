@@ -1,34 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-$ff-s: "Merriweather", serif;
+$ff-s: "Montserrat", serif;
 $ff-ss: "Play", sans-serif;
-
-$fw-n: 400;
-$fw-b: 900;
-
-@mixin sans-serif($fs, $ls: 0m, $colour: $default-text, $tt: uppercase, $lh: 1) {
-    font-size: $fs;
-    letter-spacing: $ls;
-    color: $colour;
-    text-transform: $tt;
-    line-height: $lh;
-    font-family: $ff-ss;
-    font-weight: $fw-n;
-}
-
-.tags{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.tag-box{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    background: $dark-blue;
-    border-radius: 2px;
-    padding: 2px 15px;
-    border: 1px solid $dark-blue;
-    margin: 5px;
-}

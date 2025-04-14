@@ -7,115 +7,115 @@
         <title>Callum Metcalfe - Mesh Generation</title>
         <link rel="stylesheet" href="/css/main.css">
     </head>
-    <body>
+    <body class="body">
       <div class="nav">
-        <nav>
-          <ul>
-            <li><a href="../index.html">about</a></li>
-            <li><a href="../index.html#portfolio ">portfolio</a></li>
-            <li><a href="../img/CallumMetcalfe-Resume.pdf"  target="_blank">Résumé</a></li>
-          </ul>
-          <div class="social-icons">
-            <a href="https://github.com/TragicDragoon20"><img class="social-icon" src="/img/logos/github.svg" alt="github"></a>
-            <a href="https://twitter.com/TragicDragoon_"><img class="social-icon" src="/img/logos/twitter.svg" alt="twitter"></a>
-            <a href="https://www.linkedin.com/in/callum-metcalfe-6863591a8/"><img class="social-icon" src="/img/logos/linkdin.svg" alt="linkedin"></a>
-            <a href="mailto:callumjmetcalfe@outlook.com"><img class="social-icon" src="/img/logos/email.svg" alt="email"></a>
+        <div class = "content">
+          <div class ="navigation-items">
+            <div class = "content">
+              <div class ="navigation-wrap">
+                  <nav role="navigation" class="navigation-items navigation-menu">
+                    <a href="/" aria-current="page" class="navigation-item navigation-link">Home</a>
+                    <a href="../img/CallumMetcalfe-Resume.pdf"  target="_blank" class="navigation-item navigation-link">Résumé</a>
+                  </nav> 
+              </div>
+            </div>
           </div>
-        </nav>
+        </div>
       </div>
 
-    <div class="container-all">
-      <div class="welcome">
-        <button class= "menu-button">
-          <img class="menu-hamburger" src="../img/logos/hamburger.png" alt="nav icon">
-          <img class="nav-close" src="../img/logos/closeicon.png" alt="close icon">
-        </button>
+      <div class="section">
+        <div class="container">
+          <div class="layout-grid project-overview-grid">
+            <div id="Project-Header-Box" class="Project-Header-Box">
+              <h1 class="Project-Header">Mesh Generation</h1>
+              <div>
+                <div class="tag-container">
+                  <div class="tag-box">
+                    <div class="tag">C#</div>
+                  </div>
+                  <div class="tag-box">
+                    <div class="tag">Unity</div>
+                  </div>
+                    <div class="tag-box">
+                      <div class="tag">Git</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="Project-Overview-Box">
+              <div class="Project-Overview">Project Overview</div>
+              <p class="paragraph-bigger">
+                This was a solo project submitted for my COMP270: Mathematics for 3D Worlds & Simulations module in second year. The goal of this module was to learn the fundamental mathematics involved in the design and development of real-time 3D worlds and simulations. For this module we were given 4 worksheets to complete with the first 3 being more specific in requirements whilst the 4th was more open with VFX/mesh manipulation involved.For the 4th worksheet the effect I created was a tornado which is created from a cylinder mesh that was manipulated. Whilst also creating a shader graph to add additional effects to the look of the tornado.
+              </p>
+            </div>
+            <div id="Project-Trailer-Box">
+              <div class="embed embed-mp4">
+                <video width="100%" height="100%" autoplay muted loop src="https://dl.dropboxusercontent.com/s/11ngzry4namxaja/Tornado.mp4?dl=0" type="video/mp4"></video>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="portfolio-page">
-        <div class="portfolio-page-header">
-          <div class="portfolio-page-title-box">
-            <h1 class="portfolio-page-title">Mesh Generation</h1>
-            <h2>COMP 270 Project</h2>
-          </div>
-          <div class="tags">
-            <p class="tag-box">Solo</p>
-            <p class="tag-box">C#</p>
-            <p class="tag-box">Unity</p>
-            <p class="tag-box">Git</p>
+      <div class="section">
+        <div class="container video">
+          <div class="layout-grid project-description-grid">
+            <div id="Project-Description-Box">
+              <div class="Project-Overview">Mesh Generation</div>
+            </div>
+            <p id="description-text" class="paragraph-bigger">
+              For the tornado itself it is made with two meshes. One of these meshes contains the larger mesh which is used for the wind material and the smaller is used for the colouring of the tornado. These meshes are built using a mesh builder script which adds all the triangles, vertices, normal's and UVs to the mesh after they have been calculated. These are calculated through the Proceduralbase script which has a function that will build rings which are used to create each section of the tornado and connect them together to make it one solid mesh. This also allows the user to change the height, radius and number of segments within the mesh that is generated.
+            </p>
+            <div id="movement-gif" class="embed-mp4">
+              <img src="/img/games/MeshGeneration/tornadeWireframe.png" loading="lazy" alt class="image-2">
+            </div>
           </div>
         </div>
 
-        <div class="portfolio-page-content-section2">
-          <div class="portfolio-page-content-project-details">
-            <div class="container grid">
-              <h2 class="portfolio-page-content-contribution-title">Project Details</h2>
-              <p class="portfolio-page-content-contribution-text"> 
-                This was a solo project submitted for my COMP270: Mathematics for 3D Worlds & Simulations module in second year. The goal of this module was 
-                to learn the fundamental mathematics involved in the design and development of real-time 3D worlds and simulations. For this module we were given
-                4 worksheets to complete with the first 3 being more specific in requirements whilst the 4th was more open with VFX/mesh manipulation involved.<br><br>
+        <div class="container video">
+          <div class="layout-grid project-description-grid">
+            <div id="Project-Description-Box">
+              <div class="Project-Overview">Shader graph</div>
+            </div>
+            <p id="description-text" class="paragraph-bigger">
+              For the tornado itself it is made with two meshes. One of these meshes contains the larger mesh which is used for the wind material and the smaller is used for the colouring of the tornado.<br><br>
+              These meshes are build using a mesh builder script which adds all the triangles, vertices, normal's and UVs to the mesh after they have been calculated. These are calculated through the Procedural base script which has a function that will build rings which are used to create each section of the tornado and connect them together to make it one solid mesh. This also allows the user to change the height, radius and number of segments within the mesh that is generated.            </p>
+              ◇ An area I would like to improve is how I manipulated the mesh to create the larger and smaller sections as it didn't really have anything behind it except adding a random value to the ring to make it larger or smaller at different points.
+          </div>
+        </div>
 
-                For the 4th worksheet the effect I created was a tornado which is created from a cylinder mesh that was manipulated. Whilst also creating a shader graph to
-                add additional effects to the look of the tornado.<br><br>
+        <div class="container">
+          <div class="w-layout-grid project-description-grid">
+            <div id="Project-Description-Box">
+              <div class="Project-Overview">What went well</div>
+            </div>
+            <p id="description-text" class="paragraph-bigger"> 
+              ◇ For this I was happy with the way the shader turned out as it was the first time I had properly touched unity's shader graph and felt that the effect I created worked quite well for a tornado.
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="w-layout-grid project-description-grid">
+            <div id="Project-Description-Box">
+              <div class="Project-Overview">What could have been improved</div>
+            </div>
+            <p id="description-text" class="paragraph-bigger">
+              ◇ An area I would like to improve is how I manipulated the mesh to create the larger and smaller sections as it didn't really have anything behind it except adding a random value to the ring to make it larger or smaller at different points.
               </p>
-              <img src="../img/games/Tornado.gif" alt="">
-            </div>
           </div>
+        </div>
 
-          <div class="portfolio-page-content-section2">
-            <div class="container grid">
-              <h2 class="portfolio-page-content-contribution-title">Mesh Generation</h2>
-              <p class="portfolio-page-content-contribution-text">
-                For the tornado itself it is made with two meshes. One of these meshes contains the larger mesh which is used for the wind material and the smaller is used for
-                the colouring of the tornado.<br><br>
+      </div> <!--Section End-->
 
-                These meshes are build using a mesh builder script which adds all the triangles, vertices, normals and UVs to the mesh after they have been calculated. 
-                These are calculated through the Proceduralbase script which has a function that will build rings which are used to create each section of the tornado and
-                connect them together to make it one solid mesh. This also allows the user to change the height, radius and number of segments within the mesh that is generated.
-                </p>
-              <img src="../img/games/tornadeWireframe.png" alt="">
-            </div>
-          </div>
-
-          <div class="portfolio-page-content-section1">
-            <div class="container grid">
-              <h2 class="portfolio-page-content-contribution-title">Shader Graph</h2>
-              <p class="portfolio-page-content-contribution-text">
-                To make the shader for the tornado I used some vertex manipulation in order to give the tornado a wobble effect to help play into the fact that
-                the tornado is moving and not a solid object that goes from the top to the ground.<br><br>
-
-                In addition to this I utilised some simple noise to create the tornado twirling effect.
-                </p>
-              <img src="../img/games/Tornado shader graph.png" alt="">
-            </div>
-          </div>
-
-          <div class="portfolio-page-content-section2">
-            <div class="container">
-              <h2 class="portfolio-page-content-contribution-title">What went well</h2>
-              <p class="portfolio-page-content-contribution-text">
-                For this I was happy with the way the shader turned out as it was the first time I had properly touched unity's shader graph and felt that the effect I created
-                worked quite well for a tornado.
-                </p>
-            </div>
-          </div>
-
-          <div class="portfolio-page-content-section1">
-            <div class="container">
-              <h2 class="portfolio-page-content-contribution-title">What could have been improved</h2>
-              <p class="portfolio-page-content-contribution-text">
-                An area I would like to improve is how I manipulated the mesh to create the larger and smaller sections as it didn't really have anything behind it except adding a 
-                random value to the ring to make it larger or smaller at different points.
-                </p>
-            </div>
-          </div>
-
+      <div class="footer-wrap">
+        <div class="footer-links">
+          <a href="https://github.com/TragicDragoon20" target="_blank" class="footer-item">Github</a>
+          <a href="https://twitter.com/TragicDragoon_" target="_blank" class="footer-item">Twitter</a>
+          <a href="http://www.linkedin.com/in/callum-metcalfe" target="_blank" class="footer-item">Linkedin</a>
+        </div>
       </div>
-    </div>
-  </div>
 
-
-  <script src= "../js/nav.js"></script>
-  <script src= "../js/slideshow.js"></script>    
     </body>
 </html>

@@ -1,74 +1,177 @@
-.about-me{
-    @include container($max-width: 70em);
-    @include clearfix;
-    padding: 3em 1em;
+#Portfolio-1{
+    -ms-grid-column: span 2;
+    grid-column-start: span 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: span 2;
+    -ms-grid-row: span 2;
+    grid-row-start: span 2;
+    -ms-grid-row-span: 2;
+    grid-row-end: span 2;
+    -ms-grid-column-align: stretch;
+    justify-self: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
 }
 
-.about-img{
-    width: 50em;
-    @media (min-width: 40em){
-        float: left;
-        margin-right: 1em;
-    }
+#Portfolio-2{
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-column-align: stretch;
+    justify-self: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
 }
 
-.about-title{
-    margin-bottom: 0em;
+#Portfolio-3{
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-column-align: stretch;
+    justify-self: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
 }
 
-.about-subtitle{
-    margin: 0.5em 0;
+#Portfolio-4{
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-column-align: stretch;
+    justify-self: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
 }
 
-@supports(display: grid){
-    .about-me{
-        display: grid;
-        grid-template-columns: [port-start]minmax(1fr) [name-start]minmax(6em, 1fr) [img-end]1fr [port-end];
-        gap: .5em;
-        column-gap: 1em;
-        @include mq($width: 60em){
-            grid-template-columns: [port-start]minmax(24em, 1fr) [name-start]minmax(6em, 1fr) [img-end]2fr [port-end];
-        }
-    }
+#Portfolio-5{
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-column-align: stretch;
+    justify-self: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+}
 
-    .about-img{
-        display: none;
-        grid-column: port / img;
-        @include mq($width: 85em){
-            display: block;
-            grid-row: 1 / 4;
-        }
-    }
+.grid{
+    height: 50vh;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
 
-    .about-title{
-        grid-row: 2/3;
-        grid-column: port / port;
-        align-self: end;
-        @include mq($width: 85em){
-            grid-row: 1 / 2;
-            grid-column: image-end / port;
-        }
-    }
+.inline-block{
+    max-width: 100%;
+    display: inline-block;
+}
 
-    .about-subtitle,
-    .about-text{
-        grid-column: port / port;
-        @include mq($width: 85em){
-            grid-column: image-end / port-end;
-        }
-    }
+.work-image{
+    display: block;
+    height: auto;
+    margin-bottom: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    background-color: #f4f4f4;
+    background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    text-align: center;
+    text-decoration: none;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
 
-   .about-subtitle{
-        grid-row: 3/4;
-        @include mq($width: 85em){
-            grid-row: 2 / 3;
-        }
-    }
-    .about-text{
-        grid-row: 4/4;
-        @include mq($width: 85em){
-            grid-row: 3 / 3;
-        }
-    }
+.work-image:hover {
+    opacity: 0.8;
+}
 
+.work-1{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80%;
+    margin-bottom: 20px;
+    background-image: url(/img/games/BladeGunners/BladeGunnersBanner.jpg);
+    background-position: 0% 0%;
+    background-size: cover;
+    -o-object-fit: fill;
+    object-fit: fill;
+}
+
+.work-2{
+    height: auto;
+    margin-bottom: 0px;
+    background-image: url(/img/games/TumbleTown/TumbleTown.png);
+    background-position: 0% 50%;
+    background-size: cover;
+}
+
+.work-3{
+    height: auto;
+    margin-bottom: 0px;
+    background-image: url(/img/games/MeshGeneration/MeshGeneration.png);
+    background-position: 0% 50%;
+    background-size: cover;
+}
+
+.work-4{
+    height: auto;
+    margin-bottom: 0px;
+    background-image: url(/img/games/SolarSystem/SolarSystem.png);
+    background-position: 0% 50%;
+    background-size: cover;
+}
+
+.work-5{
+    height: auto;
+    margin-bottom: 0px;
+    background-image: url(/img/games/LegalTender/legalTenderBanner.png);
+    background-position: 0% 50%;
+    background-size: cover;
+}
+
+.work-featured{
+    display: block;
+    height: auto;
+    min-height: auto;
+    min-width: auto;
+    margin-bottom: 0px;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
